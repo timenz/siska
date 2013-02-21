@@ -1,4 +1,4 @@
 siska
 =====
 
-Proyek Siska Udinus
+Proyek Sistem Akademik Udinus sebagai tugas mata kuliah RPL
