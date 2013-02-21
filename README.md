@@ -3,4 +3,4 @@ siska
 
 Proyek Sistem Akademik Udinus sebagai tugas mata kuliah RPL
 
-Petunjuk instalasi.
+Keterangan lebih lanjut bisa baca di wiki
