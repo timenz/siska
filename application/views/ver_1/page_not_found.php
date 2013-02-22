@@ -17,31 +17,6 @@
         background-color: #f5f5f5;
       }
 
-      .form-signin {
-        max-width: 300px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
-
     </style>
     <link href="{assets_url}css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -62,15 +37,7 @@
 
     <div class="container">
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">{lang_please_singin}</h2>
-        <input type="text" class="input-block-level" placeholder="{lang_email_address}">
-        <input type="password" class="input-block-level" placeholder="{lang_password}">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> {lang_remember}
-        </label>
-        <button class="btn btn-large btn-primary" type="submit">{lang_login}</button>
-      </form>
+        <h2 class="heading">Page Not Found</h2>
 
     </div> <!-- /container -->
 

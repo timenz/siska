@@ -12,14 +12,17 @@ class page extends CI_Model {
         $this->author = '';
         $this->keyword = '';
         $this->top_menu = '';
+        $this->web_mode = 'umum';
     }
     
-    function get_data($model, $method, $mode = ''){
-        $this->cek_permission($model, $method);
+    function get_data($mode = ''){
+        $this->cek_permission();
         
         if($mode == 'post'){
             return $this->konten;
         }
+        
+        $this->set_top_menu();
         
         $array = array(
             'base_url' => base_url(),
@@ -30,14 +33,15 @@ class page extends CI_Model {
             'keyword' => $this->keyword,
             'konten' => $this->konten,
             'top_menu' => $this->top_menu,
+            'model' => $this->model,
+            'method' => $this->method
         );
-        
-        
-        
         return $array;
     }
     
-    function cek_permission($model, $method){
+    function cek_permission(){
+        $model = $this->model;
+        $method = $this->method;
         $array = array(
             'model' => $model,
             'method' => $method
@@ -47,12 +51,29 @@ class page extends CI_Model {
             $this->permission = $row;
             $this->load->model($model);
             $this->$model->{$method}();
+        }else{
+            redirect(base_index().'page_not_found/');
         }
     }
     
-    function siswa_islogin(){
-        $this->load->model('siswa');
-        $this->siswa->is_login();
+    function mahasiswa_is_login(){
+        $this->load->model('mahasiswa');
+        $this->mahasiswa->is_login();
+    }
+    
+    function set_top_menu(){
+        $sql = "select*from web_permission where permission = '".$this->web_mode."' and is_visible = 'Y' order by urutan";
+        $array = array();
+        foreach(out_where($sql) as $row){
+            $method = $row->method;
+            if($method == 'home'){$method = '';}
+            $array[] = array(
+                'model' => $row->model,
+                'method' => $method,
+                'lang_method' => get_lang_by_code($row->method),
+            );
+        }
+        $this->top_menu = $array;
     }
     
 }

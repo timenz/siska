@@ -90,4 +90,39 @@ function get_lang($lang, $tipe, $view = '', $folder = ''){
     return $out;
 }
 
+function get_lang_by_code($code){
+    return out_field('web_lang', array('code' => 'lang_'.$code), 'value');
+}
+
+function re_captcha() {
+    $ci = & get_instance();
+    $ci->load->helper('recaptcha');
+    // Get a key from https://www.google.com/recaptcha/admin/create
+    $publickey = "6LdcEc0SAAAAADmSHkLqTYjcQqbxRp8daAtWlYFP";
+
+    # the error code from reCAPTCHA, if any
+    $error = null;
+
+    # was there a reCAPTCHA response?
+
+    return recaptcha_get_html($publickey, $error);
+}
+
+function cek_captcha() {
+    $ci = & get_instance();
+    $ci->load->helper('recaptcha');
+    $privatekey = "6LdcEc0SAAAAAIaDXkUqkQD48JWR4u7HzRFPsVe7";
+    # the response from reCAPTCHA
+    $resp = null;
+    if ($ci->input->post("recaptcha_response_field")) {
+        $resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
+
+        if ($resp->is_valid) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 // eof

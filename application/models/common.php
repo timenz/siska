@@ -8,7 +8,10 @@ class common extends CI_Model {
     }
     
     function homepage(){
-        
+        $this->page->title = 'Home Sistem Akademik';
+        //$this->page->konten = '';
+        $this->load->model('buku_tamu');
+        $this->buku_tamu->form_buku_tamu();
     }
     
 }
