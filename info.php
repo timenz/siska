@@ -1,1 +1,3 @@
-<?php echo phpinfo(); ?>
+<?php 
+// test commit 
+echo phpinfo(); ?>
