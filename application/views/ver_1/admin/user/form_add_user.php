@@ -10,16 +10,27 @@ foreach($row_karyawan as $row){
 }
 
 ?>
-<div>
-    <h3>{page_title}</h3>
+<div class="span12">
+    <h3 class="heading">{page_title}</h3>
     <div>
-        <form method="post" action="{action}">
+        <form method="post" action="{action}" class="form-horizontal">
         <fieldset>
-        <div><label>{lang_username}</label><input type="text" name="username"></div>
-            <div><label>{lang_role}</label><select name="id_role"><?php echo $role_opt; ?></select></div>
-            <div><label>{lang_karyawan}</label><select name="id_karyawan"><?php echo $k_opt; ?></select></div>
-            <div>{lang_first_password}</div>
-            <div><input type="submit" value="{lang_submit}"></div>
+            <div class="control-group formSep">
+                <label class="control-label">{lang_username}</label>
+                <div class="controls"><input type="text" name="username" class="input-xlarge"><span class="help-block">{lang_first_password}</span>
+                </div>
+            </div>
+            <div class="control-group formSep">
+                <label class="control-label">{lang_role}</label>
+                <div class="controls"><select name="id_role"><?php echo $role_opt; ?></select></div>
+            </div>
+            <div class="control-group formSep">
+                <label class="control-label">{lang_karyawan}</label>
+                <div class="controls"><select name="id_karyawan"><?php echo $k_opt; ?></select></div>
+            </div>
+            <div class="control-group">
+                <div class="controls"><input class="btn btn-gebo" type="submit" value="{lang_submit}"></div>
+            </div>
         </fieldset>
         </form>
     </div>

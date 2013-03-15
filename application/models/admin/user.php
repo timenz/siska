@@ -14,7 +14,7 @@ class user extends CI_Model {
         }
 
 
-        $row = out_row("select a.*, b.role from web_user a, web_role b where a.id_role = b.id and a.id = $id ");
+        $row = out_row("select a.*, b.role, c.nama, c.alamat, c.telp from web_user a, web_role b, karyawan c where a.id_role = b.id and a.id_karyawan = c.id and a.id = $id ");
         if(count($row) > 0){
             $this->page->data_user = $row;
             $this->page->web_mode = $row->role;
@@ -24,6 +24,7 @@ class user extends CI_Model {
     }
 
     function login_form(){
+
         $array = array(
             'action' => base_index().'admin/post/user/cek_login'
         );
@@ -57,7 +58,7 @@ class user extends CI_Model {
         $konten = array();
         $no = 1;
         foreach($rows as $row){
-            $link = '<a href="'.base_index().'admin/user/form_edit_user/'.int2kal($row->id).'">edit</a>';
+            $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/user/form_edit_user/'.int2kal($row->id).'">edit</a></div>';
             $konten[] = array($no, $row->username, $row->role, $link);
             $no++;
         }

@@ -1,32 +1,467 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed844748-5b21-477c-a4d9-e4d105a6b839" name="Default" comment="remove folder netbean project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/siska.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/admin/admin_common.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/admin/page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/admin/user.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/admin/zdev_permission.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/listing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/user/form_add_user.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/user/form_login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/basic_helper.php" afterPath="$PROJECT_DIR$/application/helpers/basic_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Parser.php" afterPath="$PROJECT_DIR$/system/libraries/Parser.php" />
+    <list default="true" id="ed844748-5b21-477c-a4d9-e4d105a6b839" name="Default" comment="tambah theme buat halaman admin">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/bootstrap/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/bootstrap/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/adt-icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/ajax_loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bg_a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bg_b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bg_c.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bg_d.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bg_e.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bullet_blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bullet_green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bullet_orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/bullet_red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/error_big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/external_link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/flags/flags.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/ID.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/Scissors.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/add-item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/addressbook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/agent.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/apple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/arrow-round.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/badge.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/bar-chart-02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/bar-chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/battery-full.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/bird.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/boat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/bookmark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/briefcase.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/calculator.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/cassette.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/chain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/chat-.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/chat-02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/cloud-filled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/cloud-outline.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/computer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/configuration.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/configuration02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/connected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/connections.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/container.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/copy-item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/database.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/delete-item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/disc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/dollar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/download.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/email.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/fan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/fancy-globe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/female-user.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/fire.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/first-aid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/flag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/flower.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/full-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/glasses.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/globe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/happy-face.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/headphone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/heart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/ipod.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/lab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/lady.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/lamp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/leaves.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/line-globe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/lock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/lookup.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/male-user.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/microphone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/mobile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/mobile2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/mouse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/multi-agents.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/music-node.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/network-pc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/network.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/next-item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/phone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/pie-chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/pin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/plane.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/print.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/processing-02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/processing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/push-pin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/recycle-empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/recycle-full.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/reload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/rss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/satellite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/scale.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/server.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/shield.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/shut-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/tag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/tap.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/tree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/umbrella.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/unlock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/usb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/van.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/wifi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/gCons/world.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/main_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/sidebar_switch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/splashy/splashy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/ui.totop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/user_avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/chosen/chosen-sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/images/arrow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/images/arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/images/extended.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/images/filler.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/js/AutoFill.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/images/arrow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/images/arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/images/extended.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/images/insert.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/js/ColReorder.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/images/arrow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/images/arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/images/extended.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/images/button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/js/ColVis.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/images/arrow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/images/arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/images/extended.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/media/js/FixedColumns.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/js/FixedHeader.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/js/KeyTable.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/images/arrow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/images/arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/images/extended.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/images/loading-background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/js/dataTables.scroller.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/as3/lib/AlivePDF.swc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/collection.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/collection_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/copy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/copy_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/csv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/csv_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/pdf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/pdf_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/print.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/print_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/psd/collection.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/psd/copy document.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/psd/file_types.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/psd/printer.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/xls.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/images/xls_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/js/TableTools.min.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/swf/copy_csv_xls.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/swf/copy_csv_xls_pdf.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/Sorting icons.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/back_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/back_enabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/back_enabled_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/forward_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/forward_enabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/forward_enabled_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/sort_asc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/sort_asc_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/sort_both.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/sort_desc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/images/sort_desc_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jBreadcrumbs/Images/ChevronOverlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jBreadcrumbs/Images/free-all-purpose-icons-gcons.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/css/Aristo/images/bg_fallback.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/css/Aristo/images/icon_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/css/Aristo/images/progress_bar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/css/Aristo/images/slider_handles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/css/Aristo/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/css/Aristo/images/ui-icons_454545_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/dashboard.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/page_not_found.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/bootstrap/css/bootstrap-responsive.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/css/blue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/flags/flags.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/img/splashy/splashy.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/bootstrap.plugins.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/forms/jquery.autosize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/forms/jquery.ui.touch-punch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_dashboard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_icons.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_notifications.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_tables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_user_profile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_validation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/ios-orientationchange-fix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery-migrate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.actual.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.debouncedresize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.easing.1.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.imagesloaded.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.mediaTable.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.peity.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery.wookmark.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/jquery_cookie_min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/js/selectNav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/UItoTop/jquery.ui.totop.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/antiscroll/antiscroll.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/antiscroll/jquery-mousewheel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/chosen/chosen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/chosen/chosen.jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/colorbox/colorbox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/colorbox/jquery.colorbox.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/css/datatables_beoro.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/css/demo_page.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/css/demo_table.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/css/demo_table_jui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/css/jquery.dataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/css/jquery.dataTables_themeroller.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/callbacks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/inputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/css/AutoFill.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/02ff627f40.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/36456bf45f.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/47cac4f141.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/5a72546831.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/8ee4007a12.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/AutoFill.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/a69b02bcf2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/b44bd4821a.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/c6945fdb4a.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/global.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/css/doc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/css/shCore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/css/shThemeDataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/js/doc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/js/shBrushJScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/js/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/docs/media/license/Syntax Highlighter" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/js/AutoFill.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/media/js/AutoFill.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/AutoFill/scrolling.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/alt_insert.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/col_filter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/colvis.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/fixedcolumns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/fixedheader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/css/ColReorder.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/46848f6f3b.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/4f1246032c.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/ColReorder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/a69b02bcf2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/global.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/css/doc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/css/shCore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/css/shThemeDataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/js/doc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/js/shBrushJScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/js/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/docs/media/license/Syntax Highlighter" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/js/ColReorder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/media/js/ColReorder.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/predefined.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/reset.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/scrolling.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/server_side.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/state_save.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColReorder/theme.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/exclude_columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/css/ColVis.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/css/ColVisAlt.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/ColVis.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/a69b02bcf2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/ccb5a49865.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/global.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/css/doc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/css/shCore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/css/shThemeDataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/js/doc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/js/shBrushJScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/js/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/docs/media/license/Syntax Highlighter" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/js/ColVis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/media/js/ColVis.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/mouseover.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/style.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/text.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/theme.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/title_callback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/two_tables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/ColVis/two_tables_identical.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/col_filter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/css_size.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/070023b890.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/526f872207.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/73098af57c.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/889588ec06.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/91bce7c4ad.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/FixedColumns.defaults.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/FixedColumns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/a6bd52f587.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/d3890ba7c4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/e20106c59a.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/global.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/css/doc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/css/shCore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/css/shThemeDataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/js/doc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/js/shBrushJScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/js/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/docs/media/license/Syntax Highlighter" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/index_column.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/left_right_columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/media/js/FixedColumns.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/media/js/FixedColumns.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/right_column.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/row_grouping.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/row_grouping_height.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/rowspan.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/scale_fixed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/scale_relative.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/server-side-processing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/themed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/two_columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedColumns/x_y_scrolling.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/html_table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/js/FixedHeader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/js/FixedHeader.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/top_bottom_left_right.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/top_left.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/two_tables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/FixedHeader/zIndexes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/datatable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/datatable_scrolling.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/editing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/js/KeyTable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/KeyTable/js/KeyTable.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/api_scrolling.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/large_js_source.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/css/dataTables.scroller.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/data/2500.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/data/server_processing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/Scroller.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/Scroller.oDefaults.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/baed189d4a.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/c6053fac6b.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/css/doc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/css/shCore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/css/shThemeDataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/js/doc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/js/shBrushJScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/js/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/docs/media/license/Syntax Highlighter" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/js/dataTables.scroller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/media/js/dataTables.scroller.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/server-side_processing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/Scroller/state_saving.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/alt_init.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/alter_buttons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/bootstrap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/button_text.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/collection.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/defaults.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/as3/ZeroClipboard.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/as3/ZeroClipboardPdf.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/css/TableTools.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/css/TableTools_JUI.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/js/TableTools.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/js/TableTools.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/media/js/ZeroClipboard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/multi_instance.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/multiple_tables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/pdf_message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/plug-in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/select_multi.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/select_single.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/swf_path.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/tabs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/extras/TableTools/theme.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/jquery.dataTables.bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/jquery.dataTables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/jquery.dataTables.sorting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/js/jquery.dataTables.bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/js/jquery.dataTables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/datatables/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/flot/jquery.flot.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/flot/jquery.flot.pie.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/flot/jquery.flot.resize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/fullcalendar/fullcalendar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/fullcalendar/fullcalendar_gebo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/google-code-prettify/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/google-code-prettify/prettify.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/hint_css/hint.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jBreadcrumbs/css/BreadCrumb.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/css/Aristo/Aristo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/jquery-ui-1.10.0.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/jquery-ui-1.9.2.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/jquery-ui/jquery.ui.touch-punch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/list_js/list.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/list_js/plugins/paging/list.paging.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/qtip2/jquery.qtip.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/qtip2/jquery.qtip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/smoke/smoke.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/smoke/themes/gebo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/sticky/sticky.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/sticky/sticky.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/validation/jquery.validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ver_1/admin/lib/validation/jquery.validate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin.php" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/admin_common.php" afterPath="$PROJECT_DIR$/application/models/admin/admin_common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/page.php" afterPath="$PROJECT_DIR$/application/models/admin/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/user.php" afterPath="$PROJECT_DIR$/application/models/admin/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/zdev_permission.php" afterPath="$PROJECT_DIR$/application/models/admin/zdev_permission.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/ver_1/admin/listing.php" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/listing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/ver_1/admin/user/form_add_user.php" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/user/form_add_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/ver_1/admin/user/form_login.php" afterPath="$PROJECT_DIR$/application/views/ver_1/admin/user/form_login.php" />
     </list>
     <ignored path="siska.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,25 +484,25 @@
       <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="36" selection-start="848" selection-end="848" vertical-scroll-proportion="-0.625">
+            <state line="68" column="42" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basic_helper.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/helpers/basic_helper.php">
+      <file leaf-file-name="page_not_found.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/page_not_found.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="12" selection-start="3749" selection-end="3749" vertical-scroll-proportion="-33.833332">
+            <state line="20" column="23" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_common.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/admin/admin_common.php">
+      <file leaf-file-name="dashboard.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="9" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
+            <state line="1" column="43" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,7 +511,16 @@
       <file leaf-file-name="home_admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="64" selection-start="2349" selection-end="2349" vertical-scroll-proportion="-18.208334">
+            <state line="63" column="52" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_login.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/user/form_login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="6" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.5411499">
               <folding />
             </state>
           </provider>
@@ -85,16 +529,16 @@
       <file leaf-file-name="listing.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/listing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="34" selection-start="0" selection-end="656" vertical-scroll-proportion="0.0">
+            <state line="1" column="41" selection-start="0" selection-end="63" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form_add_user.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/user/form_add_user.php">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/ver_1/admin/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="822" selection-end="822" vertical-scroll-proportion="-13.75">
+            <state line="830" column="67" selection-start="59050" selection-end="59050" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,16 +547,7 @@
       <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/admin/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="0" selection-end="3471" vertical-scroll-proportion="-7.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zdev_permission.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/admin/zdev_permission.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="130" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.4735062">
+            <state line="31" column="96" selection-start="770" selection-end="1015" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,7 +556,16 @@
       <file leaf-file-name="page.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/admin/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="45" selection-start="2277" selection-end="2277" vertical-scroll-proportion="-27.583334">
+            <state line="58" column="41" selection-start="1775" selection-end="1775" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_common.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/admin/admin_common.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="95" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,25 +584,26 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/controllers/home.php" />
-        <option value="$PROJECT_DIR$/assets/ver_1/css/admin.css" />
-        <option value="$PROJECT_DIR$/application/models/admin/common.php" />
-        <option value="$PROJECT_DIR$/application/models/admin/admin_common.php" />
-        <option value="$PROJECT_DIR$/application/views/ver_1/admin/form_login.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
-        <option value="$PROJECT_DIR$/application/models/admin/page.php" />
-        <option value="$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php" />
-        <option value="$PROJECT_DIR$/application/views/ver_1/admin/listing.php" />
-        <option value="$PROJECT_DIR$/system/libraries/Parser.php" />
-        <option value="$PROJECT_DIR$/application/views/ver_1/admin/user/form_add_user.php" />
         <option value="$PROJECT_DIR$/application/helpers/basic_helper.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
+        <option value="$PROJECT_DIR$/application/views/ver_1/admin/login.php" />
+        <option value="$PROJECT_DIR$/assets/ver_1/admin/js/gebo_common.js" />
+        <option value="$PROJECT_DIR$/assets/ver_1/admin/js/selectNav.js" />
+        <option value="$PROJECT_DIR$/application/views/ver_1/admin/listing.php" />
+        <option value="$PROJECT_DIR$/application/views/ver_1/admin/user/form_add_user.php" />
         <option value="$PROJECT_DIR$/application/models/admin/user.php" />
         <option value="$PROJECT_DIR$/application/models/admin/zdev_permission.php" />
+        <option value="$PROJECT_DIR$/application/models/admin/page.php" />
+        <option value="$PROJECT_DIR$/application/views/ver_1/admin/page_not_found.php" />
+        <option value="$PROJECT_DIR$/application/models/admin/admin_common.php" />
+        <option value="$PROJECT_DIR$/application/views/ver_1/admin/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php" />
+        <option value="$PROJECT_DIR$/assets/ver_1/admin/css/style.css" />
+        <option value="$PROJECT_DIR$/application/views/ver_1/admin/user/form_login.php" />
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1420" />
     <option name="y" value="-495" />
@@ -245,7 +690,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,7 +770,11 @@
       <created>1363334639358</created>
       <updated>1363334639358</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="buat base untuk admin">
+      <created>1363366519787</created>
+      <updated>1363366519787</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -337,7 +786,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16169977" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16501103" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -388,7 +837,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove folder netbean project" />
+    <option name="LAST_COMMIT_MESSAGE" value="buat base untuk admin" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -402,113 +851,108 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="remove folder netbean project" />
+    <MESSAGE value="buat base untuk admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="527" selection-end="527" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
+        <state line="33" column="25" selection-start="1039" selection-end="1051" vertical-scroll-proportion="-13.125" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/ver_1/css/admin.css">
+    <entry file="file://$PROJECT_DIR$/assets/ver_1/admin/js/gebo_common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="31" column="20" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
+    <entry file="file://$PROJECT_DIR$/assets/ver_1/admin/js/selectNav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="9" selection-start="740" selection-end="834" vertical-scroll-proportion="-11.25" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/mahasiswa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="63" selection-start="184" selection-end="239" vertical-scroll-proportion="-3.75" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/buku_tamu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/admin/admin_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/listing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="0" selection-end="656" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="36" selection-start="848" selection-end="848" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/admin/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="45" selection-start="2277" selection-end="2277" vertical-scroll-proportion="-27.583334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/libraries/Parser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="60" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.44622424">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/user/form_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="516" selection-end="516" vertical-scroll-proportion="0.33821872">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="64" selection-start="2349" selection-end="2349" vertical-scroll-proportion="-18.208334">
-          <folding />
-        </state>
+        <state line="25" column="6" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/user/form_add_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="822" selection-end="822" vertical-scroll-proportion="-13.75">
-          <folding />
-        </state>
+        <state line="37" column="6" selection-start="1444" selection-end="1444" vertical-scroll-proportion="-23.125" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/basic_helper.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="12" selection-start="3749" selection-end="3749" vertical-scroll-proportion="-33.833332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/admin/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="0" selection-end="3471" vertical-scroll-proportion="-7.5">
+        <state line="68" column="42" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/admin/zdev_permission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="130" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.4735062">
+        <state line="14" column="66" selection-start="486" selection-end="486" vertical-scroll-proportion="0.052987598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="43" selection-start="391" selection-end="391" vertical-scroll-proportion="0.21984217" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="41" selection-start="1775" selection-end="1775" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="96" selection-start="770" selection-end="1015" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/admin_common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="95" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/page_not_found.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="23" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/listing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="41" selection-start="0" selection-end="63" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="43" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/home_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="52" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/ver_1/admin/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="830" column="67" selection-start="59050" selection-end="59050" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ver_1/admin/user/form_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="6" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.5411499">
           <folding />
         </state>
       </provider>

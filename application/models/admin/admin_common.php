@@ -9,11 +9,12 @@ class admin_common extends CI_Model {
     
     function homepage(){
         $this->page->title = 'Home Sistem Akademik';
-        $this->page->konten = 'Welcome';
+        $array = array(
 
-        if(!$this->user->is_login()){
+        );
 
-        }
+        $this->page->konten = $this->parser->parse($this->page->tpl.'dashboard', $array, true);
+
 
     }
     

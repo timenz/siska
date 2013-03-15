@@ -6,13 +6,14 @@ class page extends CI_Model {
         parent::__construct();
         $this->lang = $this->config->item('lang');
         $this->tpl = $this->config->item('tpl');
-        $this->assets_url = base_url().'assets/'.$this->tpl;
+        $this->assets_url = base_url().'assets/'.$this->tpl.'admin/';
         $this->tpl = $this->tpl.'admin/';
         $this->title = 'Home';
         $this->description = '';
         $this->author = '';
         $this->keyword = '';
         $this->top_menu = '';
+        $this->data_user = array();
         $this->web_mode = 'no_admin';
     }
 
@@ -29,13 +30,15 @@ class page extends CI_Model {
             'base_url' => base_url(),
             'base_index' => base_index(),
             'assets_url' => $this->assets_url,
+            'data_user' => (array)$this->data_user,
             'title' => $this->title,
             'description' => $this->description,
             'keyword' => $this->keyword,
             'konten' => $this->konten,
             'top_menu' => $this->top_menu,
             'model' => $this->model,
-            'method' => $this->method
+            'method' => $this->method,
+
         );
         return $array;
     }
@@ -53,7 +56,7 @@ class page extends CI_Model {
             $this->load->model('admin/'.$model);
             $this->$model->{$method}();
         }else{
-            redirect(base_index().'page_not_found/');
+            redirect(base_index().'admin/page_not_found/');
         }
     }
 

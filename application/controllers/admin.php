@@ -34,6 +34,7 @@ class admin extends CI_Controller {
         if(!$this->page->is_login()){
             $this->page->model = 'user';
             $this->page->method = 'login_form';
+            $tpl = 'login';
         }
 
         $lang = get_lang($this->page->lang, 'view_file', $tpl);

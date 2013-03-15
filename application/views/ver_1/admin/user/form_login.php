@@ -1,29 +1,33 @@
-<style type="text/css">
 
-      .form-signin {
-        max-width: 300px;
-        padding: 19px 29px 29px;
-        background-color: #fff;
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
+<div class="login_box">
 
-    </style>
-<form class="form-signin" method="post" action="{action}">
-        <h2 class="form-signin-heading">{lang_please_singin}</h2>
-        <input type="text" class="input-block-level" placeholder="{lang_email_address}" name="username">
-        <input type="password" class="input-block-level" placeholder="{lang_password}" name="password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> {lang_remember}
-        </label>
-        <button class="btn btn-large btn-primary" type="submit">{lang_login}</button>
-      </form>
+    <form action="{action}" method="post" id="login_form">
+        <div class="top_b">{lang_please_singin}</div>
+        <div class="alert alert-info alert-login">
+            {lang_notification}
+        </div>
+        <div class="cnt_b">
+            <div class="formRow">
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="{lang_email_address}" value="" />
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="{lang_password}" value="" />
+                </div>
+            </div>
+            <!--
+            <div class="formRow clearfix">
+                <label class="checkbox"><input type="checkbox" /> {lang_remember}</label>
+            </div>
+            -->
+        </div>
+        <div class="btm_b clearfix">
+            <button class="btn btn-inverse pull-right" type="submit">{lang_login}</button>
+        </div>
+    </form>
+
+
+
+</div>

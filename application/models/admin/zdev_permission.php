@@ -12,7 +12,7 @@ class zdev_permission extends CI_Model {
         $konten = array();
         $no = 1;
         foreach($rows as $row){
-            $link = '<a href="'.base_index().'admin/zdev_permission/form_edit_permission/'.int2kal($row->id).'">edit</a>';
+            $link = '<div class="btn-group"><a class="btn btn-mini btn-success" href="'.base_index().'admin/zdev_permission/form_edit_permission/'.int2kal($row->id).'">edit</a></div>';
 
             $parentz = 'none';
             $parent = out_row('web_permission', array('id' => $row->parent_model));
