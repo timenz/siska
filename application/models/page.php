@@ -13,6 +13,8 @@ class page extends CI_Model {
         $this->keyword = '';
         $this->top_menu = '';
         $this->web_mode = 'umum';
+        $this->set_slider = false;
+        $this->set_sidebar = false;
     }
     
     function get_data($mode = ''){
@@ -34,8 +36,12 @@ class page extends CI_Model {
             'konten' => $this->konten,
             'top_menu' => $this->top_menu,
             'model' => $this->model,
-            'method' => $this->method
+            'method' => $this->method,
+            'slider' => $this->set_slider(),
+            'sidebar' => $this->set_sidebar()
         );
+
+
         return $array;
     }
     
@@ -74,6 +80,22 @@ class page extends CI_Model {
             );
         }
         $this->top_menu = $array;
+    }
+
+    function set_slider(){
+        if(!$this->set_slider){return false;}
+        $array = array(
+            'assets_url' => $this->page->assets_url
+        );
+        return $this->parser->parse($this->tpl.'common/slider', $array, true);
+    }
+
+    function set_sidebar(){
+        if(!$this->set_sidebar){return false;}
+        $array = array(
+            'assets_url' => $this->page->assets_url
+        );
+        return $this->parser->parse($this->tpl.'common/sidebar', $array, true);
     }
     
 }

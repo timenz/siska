@@ -23,11 +23,9 @@ class mahasiswa extends CI_Model {
     }
     
     function login_form(){
-        $lang = get_lang($this->page->lang, 'view_file', 'form_login');
         $array = array();
-        $out = array_merge($array, $lang);
         $this->page->title = 'Halaman Login Siswa';
-        $this->page->konten = $this->parser->parse($this->views_dir.'form_login', $out, true);
+        $this->page->konten = $this->parser->parse($this->views_dir.'form_login', $array, true);
     }
     
 }
