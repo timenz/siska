@@ -2,470 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed844748-5b21-477c-a4d9-e4d105a6b839" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\bootstrap\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\bootstrap\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\bootstrap\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\bootstrap\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\bootstrap\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\css\blue.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\adt-icons.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\ajax_loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bg_a.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bg_b.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bg_c.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bg_d.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bg_e.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bullet_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bullet_green.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bullet_orange.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\bullet_red.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\error_big.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\external_link.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\flags\flags.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\flags\flags.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\ID.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\Scissors.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\add-item.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\addressbook.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\agent.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\apple.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\arrow-round.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\badge.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\bar-chart-02.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\bar-chart.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\battery-full.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\bird.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\boat.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\bookmark.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\briefcase.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\calculator.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\calendar.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\cassette.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\chain.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\chat-.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\chat-02.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\cloud-filled.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\cloud-outline.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\computer.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\configuration.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\configuration02.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\connected.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\connections.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\container.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\copy-item.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\database.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\delete-item.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\disc.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\dollar.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\download.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\edit.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\email.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\fan.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\fancy-globe.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\female-user.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\fire.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\first-aid.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\flag.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\flower.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\full-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\glasses.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\globe.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\happy-face.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\headphone.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\heart.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\home.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\ipod.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\lab.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\lady.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\lamp.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\leaves.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\light.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\line-globe.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\lock.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\lookup.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\male-user.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\microphone.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\mobile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\mobile2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\mouse.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\multi-agents.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\music-node.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\network-pc.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\network.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\next-item.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\phone.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\pie-chart.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\pin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\plane.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\print.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\processing-02.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\processing.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\push-pin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\recycle-empty.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\recycle-full.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\reload.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\rss.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\satellite.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\save.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\scale.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\screen.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\search.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\server.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\shield.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\shut-down.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\star.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\tag.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\tap.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\tree.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\umbrella.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\unlock.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\usb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\van.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\wifi.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\gCons\world.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\main_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\sidebar_switch.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\splashy\splashy.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\splashy\splashy.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\ui.totop.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\img\user_avatar.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\bootstrap.plugins.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\forms\jquery.autosize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\forms\jquery.ui.touch-punch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\gebo_common.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\gebo_dashboard.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\gebo_icons.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\gebo_notifications.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\gebo_tables.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\gebo_user_profile.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\gebo_validation.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\ios-orientationchange-fix.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery-migrate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.actual.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.debouncedresize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.easing.1.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.imagesloaded.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.mediaTable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.peity.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery.wookmark.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\jquery_cookie_min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\js\selectNav.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\UItoTop\jquery.ui.totop.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\antiscroll\antiscroll.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\antiscroll\jquery-mousewheel.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\chosen\chosen-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\chosen\chosen.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\chosen\chosen.jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\colorbox\colorbox.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\colorbox\jquery.colorbox.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\css\datatables_beoro.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\css\demo_page.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\css\demo_table.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\css\demo_table_jui.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\css\jquery.dataTables.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\css\jquery.dataTables_themeroller.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\callbacks.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\columns.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\inputs.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\css\AutoFill.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\02ff627f40.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\36456bf45f.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\47cac4f141.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\5a72546831.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\8ee4007a12.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\AutoFill.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\a69b02bcf2.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\b44bd4821a.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\c6945fdb4a.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\global.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\css\doc.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\css\shCore.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\css\shThemeDataTables.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\images\arrow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\images\arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\images\extended.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\js\doc.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\js\shBrushJScript.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\js\shCore.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\docs\media\license\Syntax Highlighter" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\images\filler.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\js\AutoFill.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\js\AutoFill.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\media\js\AutoFill.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\AutoFill\scrolling.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\alt_insert.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\col_filter.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\colvis.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\fixedcolumns.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\fixedheader.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\css\ColReorder.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\46848f6f3b.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\4f1246032c.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\ColReorder.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\a69b02bcf2.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\global.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\css\doc.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\css\shCore.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\css\shThemeDataTables.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\images\arrow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\images\arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\images\extended.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\js\doc.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\js\shBrushJScript.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\js\shCore.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\docs\media\license\Syntax Highlighter" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\images\insert.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\js\ColReorder.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\js\ColReorder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\media\js\ColReorder.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\predefined.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\reset.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\scrolling.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\server_side.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\state_save.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColReorder\theme.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\exclude_columns.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\css\ColVis.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\css\ColVisAlt.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\ColVis.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\a69b02bcf2.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\ccb5a49865.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\global.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\css\doc.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\css\shCore.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\css\shThemeDataTables.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\images\arrow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\images\arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\images\extended.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\js\doc.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\js\shBrushJScript.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\js\shCore.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\docs\media\license\Syntax Highlighter" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\images\button.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\js\ColVis.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\js\ColVis.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\media\js\ColVis.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\mouseover.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\style.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\text.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\theme.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\title_callback.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\two_tables.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\ColVis\two_tables_identical.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\col_filter.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\css_size.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\070023b890.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\526f872207.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\73098af57c.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\889588ec06.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\91bce7c4ad.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\FixedColumns.defaults.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\FixedColumns.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\a6bd52f587.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\d3890ba7c4.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\e20106c59a.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\global.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\css\doc.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\css\shCore.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\css\shThemeDataTables.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\images\arrow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\images\arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\images\extended.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\js\doc.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\js\shBrushJScript.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\js\shCore.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\docs\media\license\Syntax Highlighter" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\index_column.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\left_right_columns.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\media\js\FixedColumns.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\media\js\FixedColumns.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\media\js\FixedColumns.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\right_column.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\row_grouping.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\row_grouping_height.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\rowspan.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\scale_fixed.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\scale_relative.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\server-side-processing.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\themed.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\two_columns.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedColumns\x_y_scrolling.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\html_table.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\js\FixedHeader.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\js\FixedHeader.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\js\FixedHeader.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\top_bottom_left_right.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\top_left.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\two_tables.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\FixedHeader\zIndexes.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\datatable.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\datatable_scrolling.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\editing.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\form.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\js\KeyTable.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\js\KeyTable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\KeyTable\js\KeyTable.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\api_scrolling.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\large_js_source.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\css\dataTables.scroller.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\data\2500.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\data\server_processing.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\Scroller.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\Scroller.oDefaults.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\baed189d4a.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\c6053fac6b.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\css\doc.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\css\shCore.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\css\shThemeDataTables.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\images\arrow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\images\arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\images\extended.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\js\doc.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\js\shBrushJScript.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\js\shCore.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\docs\media\license\Syntax Highlighter" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\images\loading-background.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\js\dataTables.scroller.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\js\dataTables.scroller.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\media\js\dataTables.scroller.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\server-side_processing.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\Scroller\state_saving.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\alt_init.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\alter_buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\bootstrap.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\button_text.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\collection.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\defaults.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\as3\ZeroClipboard.as" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\as3\ZeroClipboardPdf.as" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\as3\lib\AlivePDF.swc" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\css\TableTools.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\css\TableTools_JUI.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\background.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\collection.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\collection_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\copy.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\copy_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\csv.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\csv_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\pdf.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\pdf_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\print.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\print_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\psd\collection.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\psd\copy document.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\psd\file_types.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\psd\printer.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\xls.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\images\xls_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\js\TableTools.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\js\TableTools.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\js\TableTools.min.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\js\ZeroClipboard.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\swf\copy_csv_xls.swf" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\media\swf\copy_csv_xls_pdf.swf" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\multi_instance.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\multiple_tables.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\pdf_message.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\plug-in.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\select_multi.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\select_single.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\swf_path.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\tabs.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\extras\TableTools\theme.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\Sorting icons.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\back_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\back_enabled.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\back_enabled_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\forward_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\forward_enabled.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\forward_enabled_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\sort_asc.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\sort_asc_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\sort_both.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\sort_desc.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\images\sort_desc_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\jquery.dataTables.bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\jquery.dataTables.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\jquery.dataTables.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\jquery.dataTables.sorting.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\js\jquery.dataTables.bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\js\jquery.dataTables.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\datatables\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\flot\jquery.flot.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\flot\jquery.flot.pie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\flot\jquery.flot.resize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\fullcalendar\fullcalendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\fullcalendar\fullcalendar_gebo.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\google-code-prettify\prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\google-code-prettify\prettify.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\hint_css\hint.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jBreadcrumbs\Images\ChevronOverlay.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jBreadcrumbs\Images\free-all-purpose-icons-gcons.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jBreadcrumbs\css\BreadCrumb.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jBreadcrumbs\js\jquery.jBreadCrumb.1.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\css\Aristo\Aristo.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\css\Aristo\images\bg_fallback.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\css\Aristo\images\icon_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\css\Aristo\images\progress_bar.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\css\Aristo\images\slider_handles.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\css\Aristo\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\css\Aristo\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\jquery-ui-1.10.0.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\jquery-ui-1.9.2.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\jquery-ui\jquery.ui.touch-punch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\list_js\list.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\list_js\plugins\paging\list.paging.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\qtip2\jquery.qtip.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\qtip2\jquery.qtip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\smoke\smoke.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\smoke\themes\gebo.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\sticky\sticky.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\sticky\sticky.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\validation\jquery.validate.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\admin\lib\validation\jquery.validate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\css\admin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\css\validationEngine.jquery.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\ico\apple-touch-icon-144-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\ico\apple-touch-icon-57-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\ico\apple-touch-icon-72-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\ico\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\js\html5shiv.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\js\jquery-1.8.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\js\jquery.validationEngine-en.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\assets\ver_1\js\jquery.validationEngine.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\siska_16_03_2013.sql" afterPath="" />
+      <change type="DELETED" beforePath="E:\xampp\htdocs\siska\siska_23_02_2013.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/common.php" afterPath="$PROJECT_DIR$/application/models/common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/mahasiswa.php" afterPath="$PROJECT_DIR$/application/models/mahasiswa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/page.php" afterPath="$PROJECT_DIR$/application/models/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/ver_1/home_tamu.php" afterPath="$PROJECT_DIR$/application/views/ver_1/home_tamu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ver_1/css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/assets/ver_1/css/bootstrap-responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ver_1/css/bootstrap.css" afterPath="$PROJECT_DIR$/assets/ver_1/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ver_1/js/bootstrap.js" afterPath="$PROJECT_DIR$/assets/ver_1/js/bootstrap.js" />
     </list>
     <ignored path="siska.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -485,84 +24,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
+      <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="24" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homepage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/ver_1/common/homepage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="0" selection-end="6127" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slider.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/ver_1/common/slider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/ver_1/common/sidebar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="15" selection-start="3250" selection-end="3250" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_tamu.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/ver_1/home_tamu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="71" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.35977858">
-              <folding>
-                <marker date="1365304308317" expanded="true" signature="8885:8917" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buku_tamu.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/buku_tamu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="62" selection-start="184" selection-end="238" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/common.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="40" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about_us.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/ver_1/common/about_us.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="40" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="62" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.93043476">
               <folding />
             </state>
           </provider>
@@ -633,6 +98,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -641,16 +107,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="siska" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="siska" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hellotrans" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -729,7 +204,11 @@
       <created>1363384125161</created>
       <updated>1363384125161</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new update">
+      <created>1365422891077</created>
+      <updated>1365422891077</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -741,7 +220,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19729514" sideWeight="0.50641024" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18695307" sideWeight="0.50641024" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -792,7 +271,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="tambah database terbaru" />
+    <option name="LAST_COMMIT_MESSAGE" value="new update" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -809,16 +288,12 @@
     <MESSAGE value="buat base untuk admin" />
     <MESSAGE value="tambah theme buat halaman admin" />
     <MESSAGE value="tambah database terbaru" />
+    <MESSAGE value="new update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/ver_1/css/docs.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="610" selection-end="610" vertical-scroll-proportion="0.08351893" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/ver_1/xxx_home_tamu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="18" selection-start="1956" selection-end="2400" vertical-scroll-proportion="-7.25" />
@@ -842,13 +317,6 @@
     <entry file="file://$PROJECT_DIR$/assets/ver_1/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="12" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.25597268" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/buku_tamu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="62" selection-start="184" selection-end="238" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/ver_1/common/sidebar.php">
@@ -879,7 +347,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="62" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.0">
+        <state line="97" column="62" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.6869565">
           <folding />
         </state>
       </provider>
@@ -893,24 +361,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
+        <state line="22" column="40" selection-start="741" selection-end="741" vertical-scroll-proportion="0.57391304">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/ver_1/common/about_us.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
+        <state line="14" column="40" selection-start="767" selection-end="767" vertical-scroll-proportion="0.37366548">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/ver_1/home_tamu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="71" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.35977858">
-          <folding>
-            <marker date="1365304308317" expanded="true" signature="8885:8917" placeholder="..." />
-          </folding>
+        <state line="134" column="71" selection-start="5955" selection-end="5955" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/buku_tamu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="391" selection-end="391" vertical-scroll-proportion="0.31304348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.93043476">
+          <folding />
         </state>
       </provider>
     </entry>
