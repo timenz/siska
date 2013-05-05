@@ -4,11 +4,17 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 class zdev_permission extends CI_Model {
     public function __construct() {
         parent::__construct();
-        $this->views_dir = $this->page->tpl.'user/';
+        $this->views_dir = $this->page->tpl.'zdev_permission/';
     }
 
     function list_permission(){
-        $rows = out_where("select * from web_permission limit 1000");
+        $filter = $this->input->get('role');
+        $sql = "select a.*, b.value from web_permission a left join web_lang b on concat('lang_', a.method) = b.code and b.tipe = 'menu'";
+        if($filter != ''){
+            $sql .= " where permission = '".mysql_real_escape_string($filter)."' ";
+        }
+        $sql .= " limit 1000";
+        $rows = out_where($sql);
         $konten = array();
         $no = 1;
         foreach($rows as $row){
@@ -18,28 +24,74 @@ class zdev_permission extends CI_Model {
             $parent = out_row('web_permission', array('id' => $row->parent_model));
             if(count($parent) > 0){$parentz = $parent->model.'/'.$parent->method;}
 
-            $konten[] = array($no, $parentz, $row->model, $row->method, $row->permission, $row->urutan, $row->is_visible, $link);
+            $konten[] = array($no, $row->value, $parentz, $row->model, $row->method, $row->permission, $row->urutan, $row->is_visible, $link);
             $no++;
         }
 
+        $role = (array)out_where('web_role', array());
+
         $array = array(
-            'heading' => array('', 'Parent', 'Model', 'Method', 'Permission', 'Urutan', 'Top Menu', ''),
+            'heading' => array('', 'Title', 'Parent', 'Model', 'Method', 'Permission', 'Urutan', 'Top Menu', ''),
             'konten' => $konten,
             'page_title' => 'Listing Permission',
-            'link_add' => array('name' => 'Tambah Permission', 'link' => base_index().'admin/zdev_permission/form_add_permission')
+            'role' => $role,
+            'filter_action' => base_index().'admin/zdev_permission/list_permission'
         );
-        $this->page->konten = $this->parser->parse($this->page->tpl.'listing', $array, true);
+        $this->page->konten = $this->parser->parse($this->views_dir.'listing_permission', $array, true);
     }
 
-    function form_add_user(){
+    function form_add_permission(){
         $array = array(
             'page_title' => 'Form Tambah User',
             'row_role' => out_where('web_role', array()),
             'row_karyawan' => out_where('karyawan', array()),
-            'action' => base_index().'admin/user/add_user'
+            'action' => base_index().'admin/zdev_permission/save_add_permission'
         );
 
-        $this->page->konten = $this->parser->parse($this->views_dir.'form_add_user', $array, true);
+        $this->page->konten = $this->parser->parse($this->views_dir.'form_add_permission', $array, true);
+    }
+
+    function read_dir($dir = ''){
+        $dirname = APPPATH.'models/'.$dir;
+        $list = array();
+        if ($handle = opendir($dirname)) {
+
+            /* This is the correct way to loop over the directory. */
+            while (false !== ($entry = readdir($handle))) {
+                if($entry == '.' or $entry == '..' or $entry == 'index.html'){continue;}
+                if(is_dir($dirname.$entry)){
+                    $r_list = $this->read_dir($entry.'/');
+                    if(count($r_list) > 0){
+                        $list = array_merge($list, $r_list);
+                    }
+                    //$list[] = $dirname.$entry;
+
+                }else{
+                    $list[] = array('name' => str_replace('.php', '', $entry), 'dir' => substr($dir, 0, -1));
+                }
+
+            }
+
+            closedir($handle);
+            return $list;
+        }
+    }
+
+    function form_edit_permission(){
+
+
+        $array = array(
+            'page_title' => 'Form Edit Permission',
+            'parent_permission' => out_where("select*from web_permission where is_visible = 'Y' "),
+            'row_model' => $this->read_dir(),
+            'action' => base_index().'admin/zdev_permission/save_edit_permission'
+        );
+
+        $this->page->konten = $this->parser->parse($this->views_dir.'form_edit_permission', $array, true);
+    }
+
+    function save_edit_permission(){
+
     }
 
     function add_user(){

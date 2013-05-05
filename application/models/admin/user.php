@@ -96,7 +96,34 @@ class user extends CI_Model {
     }
 
     function form_edit_user(){
+        $id = kal2int(mysql_real_escape_string(urinext('form_edit_user')));
+        $row = (array)out_row("select a.*, b.nama from web_user a, karyawan b where a.id = ".$id." and a.id_karyawan = b.id");
 
+        if(count($row) < 1 and $id < 1){redirect(base_url().'admin/user/list_user');}
+
+        $array = array(
+            'page_title' => 'Form Edit User',
+            'row_role' => out_where('web_role', array()),
+            'row_karyawan' => out_where('karyawan', array()),
+            'action' => base_index().'admin/user/edit_user',
+            'row_user' => $row
+        );
+
+        $this->page->konten = $this->parser->parse($this->views_dir.'form_edit_user', $array, true);
+    }
+
+    function edit_user(){
+        $id = mysql_real_escape_string($this->input->post('id'));
+        $passwd = mysql_real_escape_string($this->input->post('password'));
+        if($id < 1){redirect(base_index().'admin/user/list_user');}
+
+        $arr_in = array('id_role' => mysql_real_escape_string($this->input->post('id_role')));
+        if(strlen($passwd) > 0){
+            $arr_in['password'] = md5($passwd);
+        }
+
+        $this->db->update('web_user', $arr_in, array('id' => $id));
+        redirect(base_index().'admin/user/list_user');
     }
 
 

@@ -50,9 +50,12 @@ class page extends CI_Model {
             'model' => $model,
             'method' => $method
         );
-        $row = out_row('web_permission', $array);
-        if(count($row) > 0){
-            $this->permission = $row;
+        //print_r($array);exit();
+        //$row = out_row('web_permission', $array);
+        //if(count($row) > 0){
+        //exit(APPPATH.'models/admin/'.$model.'.php');
+        if(file_exists(APPPATH.'models/admin/'.$model.'.php')){
+            //$this->permission = $row;
             $this->load->model('admin/'.$model);
             $this->$model->{$method}();
         }else{
@@ -66,7 +69,12 @@ class page extends CI_Model {
     }
 
     function set_top_menu(){
-        $sql = "select*from web_permission where permission = '".$this->web_mode."' and is_visible = 'Y' order by urutan";
+        $this->top_menu = $this->r_top_menu();
+    }
+
+    function r_top_menu($parent = 0){
+        $sql = "select*from web_permission where permission = '".$this->web_mode."' and parent_model = ".$parent." and is_visible = 'Y' order by urutan";
+        $sql .= "";
         $array = array();
         foreach(out_where($sql) as $row){
             $method = $row->method;
@@ -74,10 +82,13 @@ class page extends CI_Model {
             $array[] = array(
                 'model' => $row->model,
                 'method' => $method,
-                'lang_method' => get_lang_by_code($row->method),
+                //'lang_method' => get_lang_by_code($row->method),
+                'lang_method' => $row->title,
+                //'child' => array(),
+                'child' => $this->r_top_menu($row->id)
             );
         }
-        $this->top_menu = $array;
+        return $array;
     }
 
 }

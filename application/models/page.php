@@ -53,8 +53,10 @@ class page extends CI_Model {
             'method' => $method
         );
         $row = out_row('web_permission', $array);
-        if(count($row) > 0){
-            $this->permission = $row;
+
+        //if(count($row) > 0){
+        if(file_exists(APPPATH.'models/'.$model)){
+            //$this->permission = $row;
             $this->load->model($model);
             $this->$model->{$method}();
         }else{
@@ -76,7 +78,8 @@ class page extends CI_Model {
             $array[] = array(
                 'model' => $row->model,
                 'method' => $method,
-                'lang_method' => get_lang_by_code($row->method),
+                //'lang_method' => get_lang_by_code($row->method),
+                'lang_method' => $row->title,
             );
         }
         $this->top_menu = $array;

@@ -61,7 +61,7 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="{base_index}admin"><i class="icon-home icon-white"></i> Sistem Admin <span class="sml_t">1.0</span></a>
+            <a class="brand" href="{base_index}admin"><i class="icon-home icon-white"></i> Siska Admin <span class="sml_t">ver 1.0</span></a>
             <ul class="nav user_menu pull-right">
                 <li class="divider-vertical hidden-phone hidden-tablet"></li>
                 <li class="dropdown">
@@ -74,18 +74,32 @@
                     </ul>
                 </li>
             </ul>
+
             <ul class="nav" id="mobile-nav">
                 <?php
-                $tmn = '';
-                foreach($top_menu as $tm){
-                    // class="active"
-                    $model = $tm['model'].'/';
-                    if($model == '/'){
-                        $model = '';
+                //print_r($top_menu);
+                function set_menu($menu){
+                    $tmn = '';
+                    foreach($menu as $tm){
+                        // class="active"
+                        $model = $tm['model'].'/';
+                        if($model == '/'){
+                            $model = '';
+                        }
+                        $str = '<li><a href="'.base_index().'admin/'.$model.$tm['method'].'">'.$tm['lang_method'].'</a></li>'."\n";
+                        if(count($tm['child']) > 0){
+                            $str = '<li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> '.$tm['lang_method'].' <b class="caret"></b></a>
+                    <ul class="dropdown-menu">';
+                            $str .= set_menu($tm['child']);
+                            $str .= '</ul></li>';
+                        }
+                        $tmn .= $str;
                     }
-                    $tmn .= '<li><a href="'.base_index().'admin/'.$model.$tm['method'].'">'.$tm['lang_method'].'</a></li>'."\n";
+
+                    return $tmn;
                 }
-                print($tmn);
+                print(set_menu($top_menu));
                 ?>
                 <!--
                 <li class="dropdown">
