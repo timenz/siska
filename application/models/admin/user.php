@@ -54,17 +54,17 @@ class user extends CI_Model {
     }
 
     function list_user(){
-        $rows = out_where("select a.*, b.role from web_user a, web_role b where a.id_role = b.id limit 1000");
+        $rows = out_where("select a.*, b.role, c.nama from web_user a, web_role b, karyawan c where a.id_role = b.id and a.id_karyawan = c.id limit 1000");
         $konten = array();
         $no = 1;
         foreach($rows as $row){
             $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/user/form_edit_user/'.int2kal($row->id).'">edit</a></div>';
-            $konten[] = array($no, $row->username, $row->role, $link);
+            $konten[] = array($no, $row->username, $row->role, $row->nama, $link);
             $no++;
         }
 
         $array = array(
-            'heading' => array('', 'Username', 'Role', ''),
+            'heading' => array('#', 'Username', 'Role','Nama Karyawan', '#'),
             'konten' => $konten,
             'page_title' => 'Listing User',
             'link_add' => array('name' => 'Tambah User', 'link' => base_index().'admin/user/form_add_user')
