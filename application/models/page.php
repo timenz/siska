@@ -55,7 +55,7 @@ class page extends CI_Model {
         $row = out_row('web_permission', $array);
 
         //if(count($row) > 0){
-        if(file_exists(APPPATH.'models/'.$model)){
+        if(file_exists(APPPATH.'models/'.$model.'.php')){
             //$this->permission = $row;
             $this->load->model($model);
             $this->$model->{$method}();
