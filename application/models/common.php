@@ -26,6 +26,17 @@ class common extends CI_Model {
         );
         $this->page->konten = $this->parser->parse($this->view_dir.'about_us', $array, true);
     }
+
+    function contact_us(){
+        $this->page->title = 'Hubungi Kami';
+        $this->page->set_sidebar = true;
+        $array = array(
+            'assets_url' => $this->page->assets_url
+        );
+        $this->page->konten = $this->parser->parse($this->view_dir.'contact_us2', $array, true);
+    }
+
+
     
 }
 /* End of file welcome.php */
