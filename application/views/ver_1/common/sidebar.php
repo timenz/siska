@@ -5,7 +5,7 @@
             <h4><span class="colored">///</span> Blog Categories</h4>
             <hr>
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="">Web templates</a></li>
+                <li class="active"><a href="">Web Templates</a></li>
                 <li><a href="">Logo Design</a></li>
                 <li><a href="">Print & Media</a></li>
                 <li><a href="">CSS3 Ttutorials</a></li>
