@@ -1,3 +1,4 @@
 <?php 
-// test commit 
+// test commit
+// coba masukan commit
 echo phpinfo();//test ?>
