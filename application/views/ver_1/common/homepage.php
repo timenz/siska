@@ -37,38 +37,7 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="row">
-            <div class="span6">
-                <div class="blog_item">
-                    <div class="blog_head">
-                        <h3><a href="blog_single.html">Cassidy - Erevan Tusk</a></h3>
-                    </div>
-                    <div class="row">
-                        <iframe src="http://player.vimeo.com/video/40221513?color=ffffff" class="span6" height="270" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                    </div>
-                    <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.<br><br><a class="btn btn-small" href="blog_single.html">Read More</a></p>
-                </div>
-            </div>
-            <div class="span2">
-                <div class="ddate">
-                    <h5><i class="icon-calendar"></i> 20 April / 2012</h5>
-                    <div class="firstA"></div>
-                </div>
-                <div class="meta">
-                    <span><strong><i class="icon-list-alt"></i> Category:</strong> <a href="#">Video</a></span>
-                    <span><strong><i class="icon-user"></i> Author:</strong> <a href="#">OrangeIdea</a></span>
-                    <span><strong><i class="icon-comment"></i> Comments:</strong> <a href="#">15</a></span>
-                </div>
-                <hr>
-                <span class="share">Share options: </span>
-                <div class="addthis_toolbox addthis_default_style ">
-                    <a class="addthis_counter addthis_pill_style"></a>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </section>
+
     <section>
         <div class="row">
             <div class="span6">

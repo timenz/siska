@@ -18,9 +18,12 @@ class pendaftaran extends CI_Model {
     }
 
     function form_pendaftaran(){
+        if(!$this->mahasiswa->is_login() or $this->page->web_mode != 'calon_mahasiswa'){ redirect(base_index(), 'refresh'); }
+        $row = (array)$this->page->data_siswa;
         $this->page->set_sidebar = true;
         $array = array(
             'assets_url' => $this->page->assets_url,
+            'row' => $row,
             'base_index' => base_index(),
             'propinsi' => (array)out_where('geo_propinsi'),
             'jenjang_pendidikan' => (array)out_where('jenjang_pendidikan'),

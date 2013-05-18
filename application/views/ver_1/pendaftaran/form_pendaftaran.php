@@ -57,7 +57,7 @@ foreach($jenis_pendaftaran as $prop){
                         <div class="control-group">
                             <label class="control-label" for="nama">Nama Lengkap</label>
                             <div class="controls">
-                                <input type="text" class="input-xlarge validate[required]" id="nama">
+                                <input type="text" class="input-xlarge validate[required]" id="nama" value="<?php echo $row['nama']; ?>">
                                 <p class="help-block">namanya di isi lengkap ya</p>
                             </div>
                         </div>

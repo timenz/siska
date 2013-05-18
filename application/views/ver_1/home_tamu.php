@@ -58,16 +58,29 @@
                 <nav id="main-nav">
                     <ul id="menu">
                         <?php
-                        $tmn = '';
-                        foreach($top_menu as $tm){
-                            // class="active"
-                            $model = $tm['model'].'/';
-                            if($model == '/'){
-                                $model = '';
+                        function set_menu($menu){
+                            $tmn = '';
+                            foreach($menu as $tm){
+                                // class="active"
+                                $model = $tm['model'].'/';
+                                if($model == '/'){
+                                    $model = '';
+                                }
+                                $str = '<li><a href="'.base_index().''.$model.$tm['method'].'">'.$tm['lang_method'].'</a>';
+                                if(count($tm['child']) > 0){
+                                    $str .= '<ul>';
+                                    $str .= set_menu($tm['child']);
+                                    $str .= '</ul>';
+                                }
+                                $str .= '</li>';
+                                $tmn .= $str;
                             }
-                            $tmn .= '<li><a href="'.base_index().$model.$tm['method'].'">'.$tm['lang_method'].'</a></li>'."\n";
+
+                            return $tmn;
                         }
-                        print($tmn);
+                        print(set_menu($top_menu));
+
+
                         ?>
                     </ul>
                 </nav><!-- end #main-nav -->
