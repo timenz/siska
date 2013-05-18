@@ -1,7 +1,7 @@
 <div  class="span12">
     <h3 class="heading">{page_title}</h3>
     <div style="margin-bottom: 10px;">
-        <?php if(count($link_add) > 1){ ?>
+        <?php if(isset($link_add) and count($link_add) > 1){ ?>
         <a class="btn btn-success" href="<?php echo $link_add['link']; ?>"><?php echo $link_add['name']; ?></a>
         <?php } ?>
     </div>

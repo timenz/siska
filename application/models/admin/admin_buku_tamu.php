@@ -8,7 +8,7 @@ class admin_buku_tamu extends CI_Model {
     }
 
     function homepage(){
-        $this->page->title = 'Home Sistem Akademik';
+        $this->page->title = 'Home Sistem Akademik - Buku Tamu';
         $array = array(
 
         );
