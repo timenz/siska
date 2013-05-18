@@ -5,7 +5,8 @@
  * and open the template in the editor.
  */
 function base_index(){
-    return base_url().'index.php/';
+    //return base_url().'index.php/';
+    return base_url();
 }
 
 function urinext($var='') {
@@ -69,19 +70,17 @@ function out_field($tb, $where = array(), $field = 'id') {
     return '';
 }
 
-function get_lang($lang, $tipe, $view = '', $folder = ''){
+function get_lang($tipe, $view = ''){
+    $CI = & get_instance();
     $array = array(
-        'lang' => $lang,
+        'lang' => $CI->config->item('lang'),
         'tipe' => $tipe,
     );
     
     if($view != ''){
         $array['view_filename'] = $view;
     }
-    
-    if($folder != ''){
-        $array['view_folder'] = $folder;
-    }
+
     $out = array();
     foreach(out_where('web_lang', $array) as $row){
         $out[$row->code] = $row->value;
@@ -123,6 +122,32 @@ function cek_captcha() {
             return false;
         }
     }
+}
+
+function int2kal($int) {
+    $abil = array("nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan");
+    $out = '';
+    foreach (str_split($int) as $item) {
+        $out .= $abil[$item] . ' ';
+    }
+    return str_replace(' ', '-', trim($out));
+}
+
+function kal2int($words) {
+    $abil = array("nol" => 0, "satu" => 1, "dua" => 2, "tiga" => 3, "empat" => 4, "lima" => 5, "enam" => 6, "tujuh" => 7, "delapan" => 8, "sembilan" => 9);
+    $out = '';
+    $i = 0;
+    foreach (explode('-', $words) as $word) {
+        if (isset($abil[$word])) {
+            $out .= $abil[$word];
+            $i++;
+        }
+    }
+
+    if($i > 0){
+        return $out;
+    }
+    return ;
 }
 
 // eof

@@ -45,6 +45,10 @@ class CI_Parser {
 	public function parse($template, $data, $return = FALSE)
 	{
 		$CI =& get_instance();
+        // patch to include langungage to parserd in
+        $key = explode('/', $template, 2);
+        $data = array_merge($data, get_lang('view_file', $key[1]));
+
 		$template = $CI->load->view($template, $data, TRUE);
 
 		return $this->_parse($template, $data, $return);
