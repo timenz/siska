@@ -55,7 +55,7 @@ class Home extends CI_Controller {
         if($uri == 'post'){
             return $this->page->get_data('post');
         }
-        print(json_encode($this->page->get_data('post')));
+        //print(json_encode($this->page->get_data('post')));
         return '';
     }
     

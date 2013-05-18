@@ -19,8 +19,20 @@ class buku_tamu extends CI_Model {
     }
     
     function simpan_komentar(){
-        $this->page->konten = '@develop';
-        echo 'ty 4 tryin, still @develop';
+    
+        if (cek_captcha())
+        {
+            $fields = $this->input->post(null, true);
+            unset($fields["recaptcha_challenge_field"]);
+            unset($fields["recaptcha_response_field"]);
+            $this->db->insert("bukutamu", $fields);
+        }
+        $array = array(
+            'action' => base_index().'post/buku_tamu/simpan_komentar',
+            'assets_url' => $this->page->assets_url,
+        );
+        redirect("buku_tamu/form_buku_tamu");
+        
     }
     
 }

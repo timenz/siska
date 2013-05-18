@@ -77,7 +77,7 @@
 
             <ul class="nav" id="mobile-nav">
                 <?php
-                //print_r($top_menu);
+               
                 function set_menu($menu){
                     $tmn = '';
                     foreach($menu as $tm){
