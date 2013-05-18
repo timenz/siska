@@ -9,7 +9,7 @@ foreach($row_role as $row){
 }
 
 $k_opt = '<option></option>';
-foreach($row_karyawan as $row){
+    foreach($row_karyawan as $row){
     $k_opt .= '<option value="'.$row->id.'">'.$row->nama.'</option>';
 }
 

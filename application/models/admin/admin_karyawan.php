@@ -9,7 +9,7 @@ class admin_karyawan extends CI_Model {
 
 
     function list_karyawan(){
-        $rows = out_where("select*from karyawan limit 1000");
+        $rows = out_where("select * from karyawan limit 1000");
         $konten = array();
         $no = 1;
         foreach($rows as $row){
