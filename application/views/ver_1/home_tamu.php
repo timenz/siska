@@ -20,6 +20,7 @@
     	<link rel="stylesheet" type="text/css" href="{assets_url}css/ie.css" />
     <![endif]-->
     <!-- fav and touch icons -->
+    <script src="{assets_url}js/jquery.js"></script>
     <link rel="shortcut icon" href="{assets_url}ico/favicon.ico">
     <link rel="apple-touch-icon" href="{assets_url}ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{assets_url}ico/apple-touch-icon-72x72.png">
@@ -33,7 +34,7 @@
     <link href='http://fonts.googleapis.com/css?family=Days+One|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Exo:800' rel='stylesheet' type='text/css'>
     <!--/GOOGLE FONTS-->
-    <script>var assets_url = '{assets_url}';</script>
+    <script>var assets_url = '{assets_url}'; base_index = '<?php echo base_index(); ?>';</script>
 </head>
 <body>
 <!--TOP-->
@@ -166,7 +167,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-<script src="{assets_url}js/jquery.js"></script>
 <script src="{assets_url}js/google-code-prettify/prettify.js"></script>
 <script src="{assets_url}js/bootstrap-transition.js"></script>
 <script src="{assets_url}js/bootstrap-alert.js"></script>

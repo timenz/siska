@@ -20,18 +20,29 @@
                     </div>
                 </div>
                 <div class="span8">
-                    <h3><span class="colored">///</span> Feel free to contact us</h3>
+                    <h3><span class="colored">///</span> Punya Pertanyaan, Komentar, Silakan isi Form Berikut</h3>
                     <div id="note"></div>
                     <div id="fields">
-                        <form class="form" id="ajax-contact-form" action="javascript:alert('Was send!');">
-                            <input type="text" name="name" class="span4" style="margin-right:25px;" placeholder="Name" />
-                            <input class="span4" name="email" placeholder="Email" />
-                            <textarea type="text" name="message" placeholder="Message" rows="8" class="span8"></textarea>
-                            <button type="submit" class="btn btn-success">Send message</button>
+                        <form class="form" id="ajax-contact-form" action="">
+                            <input type="text" id="name" class="span4" style="margin-right:25px;" placeholder="Nama" />
+                            <input class="span4" id="email" placeholder="Email, tidak akan ditampilkan" />
+                            <textarea type="text" id="message" placeholder="Pesan" rows="8" class="span8"></textarea>
+                            <button type="submit" class="btn btn-success" id="btn_bukutamu">Send message</button>
                         </form>
                     </div>
                 </div>
         </div>
     </section>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('#btn_bukutamu').click(function(e){
+            e.preventDefault();
+            var input = {name : $('#name').val(), email : $('#email').val(), message : $('#message').val()};
+            $.post(base_index + 'post/buku_tamu/simpan_komentar',input, function(data){}, 'json');
+        });
+    });
+
+</script>
 <!--/Page contetn-->

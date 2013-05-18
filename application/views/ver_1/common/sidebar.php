@@ -33,12 +33,6 @@
             </section>
 
             <section>
-                <h4><span class="colored">///</span> Adversment</h4>
-                <hr>
-                <a href="#"><img src="http://envato.s3.amazonaws.com/referrer_adverts/aj_300x250_v4.gif" alt=""/></a>
-                <a href="#"><img src="http://envato.s3.amazonaws.com/referrer_adverts/gr_300x250_v4.gif" alt=""/></a>
-            </section>
-            <section>
                 <h4><span class="colored">///</span> Pay attention!</h4>
                 <hr>
                 <div class="alert alert-block alert-success fade in">
@@ -48,11 +42,6 @@
                         <a class="btn btn-success" href="#">Take this action</a> <a class="btn" href="#">Or do this</a>
                     </p>
                 </div>
-            </section>
-            <section>
-                <h4><span class="colored">///</span> Video widget</h4>
-                <hr>
-                <iframe src="http://player.vimeo.com/video/35330925?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" height="180" width="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </section>
 
         </div>
