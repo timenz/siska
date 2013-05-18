@@ -19,8 +19,36 @@ class buku_tamu extends CI_Model {
     }
     
     function simpan_komentar(){
-        $this->page->konten = '@develop';
-        echo 'ty 4 tryin, still @develop';
+        $this->load->library('form_validation');
+        $fields = $this->input->post(null, true);
+
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('subject', 'Subject', 'required');
+        $this->form_validation->set_rules('message', 'Pesan', 'required');
+
+        if ($this->form_validation->run() === FALSE)
+        {
+            $data["status"] = "error";
+            $data["message"] = validation_errors();
+        }
+        else
+        {
+            $fields = $this->input->post(null, true);
+            $fields["tgl_posting"] = date("Y-m-d H:i:s");
+            $this->db->insert("bukutamu", $fields);
+
+            if ($this->db->affected_rows()){
+                $data["status"] = "success";
+                $data["message"] = "Terimakasih atas masukannya";
+            }
+            else{
+                $data["status"] = "error";
+                $data["message"] = "Pesan gagal disimpan ";
+            }
+        }
+        echo json_encode($data);
+        $this->page->konten = "";
     }
     
 }
