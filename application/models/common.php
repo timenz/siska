@@ -36,6 +36,20 @@ class common extends CI_Model {
         $this->page->konten = $this->parser->parse($this->view_dir.'contact_us2', $array, true);
     }
 
+    function get_listkota(){
+        $out = array('valid' => false);
+        $id = mysql_real_escape_string($this->input->post('propinsi'));
+        $row = out_where('geo_kotakab', array('propinsi_id' => $id));
+
+        if(count($row) > 0){
+            $out = array(
+                'valid' => true,
+                'konten' => $row
+            );
+        }
+        $this->page->konten = $out;
+    }
+
 
     
 }

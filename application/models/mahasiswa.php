@@ -4,7 +4,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 class mahasiswa extends CI_Model {
     public function __construct() {
         parent::__construct();
-        $this->views_dir = $this->page->tpl.'alumni_bukutamu/';
+        $this->views_dir = $this->page->tpl.'mahasiswa/';
         
     }
     function is_login(){
