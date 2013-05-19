@@ -12,7 +12,7 @@ class page extends CI_Model {
         $this->author = '';
         $this->keyword = '';
         $this->top_menu = '';
-        $this->web_mode = 'umum';
+        $this->web_mode = 'no_login';
         $this->set_slider = false;
         $this->set_sidebar = false;
     }
@@ -70,7 +70,11 @@ class page extends CI_Model {
     }
     
     function set_top_menu(){
-        $sql = "select*from web_permission where permission = '".$this->web_mode."' and is_visible = 'Y' order by urutan";
+        $this->top_menu = $this->r_top_menu();
+    }
+
+    function r_top_menu($parent = 0){
+        $sql = "select*from web_permission where (permission = '".$this->web_mode."' or permission = 'umum') and parent_model = ".$parent." and is_visible = 'Y' order by urutan";
         $array = array();
         foreach(out_where($sql) as $row){
             $method = $row->method;
@@ -80,9 +84,11 @@ class page extends CI_Model {
                 'method' => $method,
                 //'lang_method' => get_lang_by_code($row->method),
                 'lang_method' => $row->title,
+                //'child' => array(),
+                'child' => $this->r_top_menu($row->id)
             );
         }
-        $this->top_menu = $array;
+        return $array;
     }
 
     function set_slider(){

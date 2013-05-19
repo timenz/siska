@@ -147,7 +147,7 @@ $(".panel").slideToggle("normal");
 });
 });
 	
-
+/*
 jQuery.noConflict()(function($){
 var $map = $('#map-contact');
 		google.maps.event.addDomListener(window, 'resize', function() {
@@ -165,6 +165,7 @@ var $map = $('#map-contact');
 
 		}
 });
+*/
 
 jQuery.noConflict()(function($){
 $(document).ready(function() {  

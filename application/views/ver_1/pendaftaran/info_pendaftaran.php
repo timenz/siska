@@ -15,7 +15,7 @@
                     <h2>Universitas Kocar Kacir Kembali Membuka Pendaftaran </h2>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.<br><br>
 
-                        <a class="btn btn-small" href="{base_index}pendaftaran/form_pendaftaran">Daftar Sekarang Juga</a></p>
+                        <a class="btn btn-small" href="{base_index}pendaftaran/form_registrasi">Daftar Sekarang Juga</a></p>
                 </div>
             </div>
         </div>

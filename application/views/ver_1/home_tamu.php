@@ -20,7 +20,7 @@
     	<link rel="stylesheet" type="text/css" href="{assets_url}css/ie.css" />
     <![endif]-->
     <!-- fav and touch icons -->
-    <script src="{assets_url}js/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
     <link rel="shortcut icon" href="{assets_url}ico/favicon.ico">
     <link rel="apple-touch-icon" href="{assets_url}ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{assets_url}ico/apple-touch-icon-72x72.png">
@@ -58,16 +58,29 @@
                 <nav id="main-nav">
                     <ul id="menu">
                         <?php
-                        $tmn = '';
-                        foreach($top_menu as $tm){
-                            // class="active"
-                            $model = $tm['model'].'/';
-                            if($model == '/'){
-                                $model = '';
+                        function set_menu($menu){
+                            $tmn = '';
+                            foreach($menu as $tm){
+                                // class="active"
+                                $model = $tm['model'].'/';
+                                if($model == '/'){
+                                    $model = '';
+                                }
+                                $str = '<li><a href="'.base_index().''.$model.$tm['method'].'">'.$tm['lang_method'].'</a>';
+                                if(count($tm['child']) > 0){
+                                    $str .= '<ul>';
+                                    $str .= set_menu($tm['child']);
+                                    $str .= '</ul>';
+                                }
+                                $str .= '</li>';
+                                $tmn .= $str;
                             }
-                            $tmn .= '<li><a href="'.base_index().$model.$tm['method'].'">'.$tm['lang_method'].'</a></li>'."\n";
+
+                            return $tmn;
                         }
-                        print($tmn);
+                        print(set_menu($top_menu));
+
+
                         ?>
                     </ul>
                 </nav><!-- end #main-nav -->
@@ -165,7 +178,7 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>-->
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script src="{assets_url}js/google-code-prettify/prettify.js"></script>
 <script src="{assets_url}js/bootstrap-transition.js"></script>
@@ -187,8 +200,8 @@
 <script src="{assets_url}js/plugin.js"></script>
 <script src="{assets_url}js/jquery.prettyPhoto.js"></script>
 <script src="{assets_url}js/twitter.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script src="{assets_url}js/jquery.gmap.min.js"></script>
+<!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="{assets_url}js/jquery.gmap.min.js"></script>-->
 <script src="{assets_url}js/jquery.preloader.js"></script>
 <script src="{assets_url}js/custom.js"></script>
 <script type="text/javascript">var runFancy = false;</script>
