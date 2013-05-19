@@ -45,12 +45,12 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = 'server';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '192.168.2.222';
-$db['default']['username'] = 'siska';
-$db['default']['password'] = 'siska';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'toor';
 $db['default']['database'] = 'siska';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
@@ -64,6 +64,21 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
+$db['server']['hostname'] = 'blungstudio.com';//'192.168.2.222';
+$db['server']['username'] = 'siska';
+$db['server']['password'] = 'siska';
+$db['server']['database'] = 'siska';
+$db['server']['dbdriver'] = 'mysql';
+$db['server']['dbprefix'] = '';
+$db['server']['pconnect'] = TRUE;
+$db['server']['db_debug'] = TRUE;
+$db['server']['cache_on'] = FALSE;
+$db['server']['cachedir'] = '';
+$db['server']['char_set'] = 'utf8';
+$db['server']['dbcollat'] = 'utf8_general_ci';
+$db['server']['swap_pre'] = '';
+$db['server']['autoinit'] = TRUE;
+$db['server']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
