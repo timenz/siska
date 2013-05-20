@@ -220,6 +220,7 @@
             $( "#tgl_kegiatan_start" ).datepicker({
                 defaultDate: "+1w",
                 changeMonth: true,
+                beforeShowDay: $.datepicker.noWeekends,
                 dateFormat: 'yy-mm-dd',
                 numberOfMonths: 3,
                 onClose: function( selectedDate ) {
@@ -229,6 +230,7 @@
             $( "#tgl_kegiatan_end" ).datepicker({
                 defaultDate: "+1w",
                 changeMonth: true,
+                beforeShowDay: $.datepicker.noWeekends,
                 dateFormat: 'yy-mm-dd',
                 numberOfMonths: 3,
                 onClose: function( selectedDate ) {
@@ -241,5 +243,6 @@
 </script>
 
 
-</div>					</body>
+</div>
+</body>
 </html>
