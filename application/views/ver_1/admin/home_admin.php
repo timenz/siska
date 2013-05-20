@@ -214,6 +214,29 @@
         //* show all elements & remove preloader
         //setTimeout('$("html").removeClass("js")',1000);
 
+        /*
+        * date range pada kalendar informasi */
+        $(function() {
+            $( "#tgl_kegiatan_start" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                dateFormat: 'yy-mm-dd',
+                numberOfMonths: 3,
+                onClose: function( selectedDate ) {
+                    $( "#tgl_kegiatan_end" ).datepicker( "option", "minDate", selectedDate );
+                }
+            });
+            $( "#tgl_kegiatan_end" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                dateFormat: 'yy-mm-dd',
+                numberOfMonths: 3,
+                onClose: function( selectedDate ) {
+                    $( "#tgl_kegiatan_start" ).datepicker( "option", "maxDate", selectedDate );
+                }
+            });
+        });
+
     });
 </script>
 

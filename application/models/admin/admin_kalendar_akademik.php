@@ -2,8 +2,8 @@
 /**
  * Created by JetBrains PhpStorm.
  * User: memordial_aganza
- * Date: 5/18/13
- * Time: 11:05 PM
+ * Date: 5/19/13
+ * Time: 12:00 PM
  * To change this template use File | Settings | File Templates.
  */
 
@@ -34,25 +34,24 @@ class admin_kalendar_akademik extends CI_Model {
         $konten = array();
         $no = 1;
         foreach($rows as $row){
-            $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/admin_kalendar_akademik/edit/'.int2kal($row->id).'">Edit</a></div>';
-            $konten[] = array($no, $row->fakultas_nama, $row->programstudi_nama, $row->semester, $row->tahun_akademik, $link);
+            $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/admin_kalendar_akademik/form_edit_kalendar_akademik/'.int2kal($row->id).'">Edit</a></div>';
+            $konten[] = array($no, $row->tahun_akademik, $row->semester, $row->fakultas_nama, $row->programstudi_nama,   $link);
             $no++;
         }
 
         $array = array(
-            'heading' => array('', 'Fakultas', 'Program Studi', 'Semester', 'Tahun Akademik',' Action'),
+            'heading' => array('', 'Tahun Akademik', 'Semester', 'Fakultas', 'Program Studi',' Action'),
             'konten' => $konten,
             'page_title' => 'Daftar Kalendar akademik',
-            'link_add' => array('name' => 'Tambah Kalendar Akademik', 'link' => base_index().'admin/admin_kalendar_akademik/form_add_kalendar')
+            'link_add' => array('name' => 'Tambah Kalendar Akademik', 'link' => base_index().'admin/admin_kalendar_akademik/form_add_kalendar_akademik')
         );
         $this->page->konten = $this->parser->parse($this->views_dir.'list_kalendar_akademik', $array, true);
     }
 
-    function form_add_kalendar(){
-
+    function form_add_kalendar_akademik(){
         if($_POST){
             $fields = $this->input->post(NULL, TRUE);
-
+            unset($fields["id"]);
             $this->db->insert('kalendar_akademik', $fields);
             redirect(base_index().'admin/admin_kalendar_akademik/list_kalendar_akademik');
         }
@@ -71,35 +70,33 @@ class admin_kalendar_akademik extends CI_Model {
 
         $array = array(
             'page_title' => 'Tambah Kalendar Akademik',
-            'action' => base_index().'admin/admin_kalendar_akademik/form_add_kalendar',
+            'action' => base_index().'admin/admin_kalendar_akademik/form_add_kalendar_akademik',
             'link_back' => anchor("admin/admin_kalendar_akademik/list_kalendar_akademik", "Back", "class='btn btn-gebo btn-small'"),
+            'id_kalendar_akademik' => "",
+            'dropdown_fakultas' => form_dropdown("fakultas_kode",$row_fakultas, "", "id='fakultas_kode'"),
+            'dropdown_programstudi' => form_dropdown("programstudi_kode",$row_programstudi,"", "id='programstudi_kode'"),
+            'dropdown_semester' => form_dropdown("semester",array("genap" => "Genap", "ganjil" => "Ganjil"),"", "id='semester'"),
+            'tahun_akademik' => date("Y"),
             'row_fakultas' => $row_fakultas,
             'row_programstudi' => $row_programstudi,
-            'row_semester' => array("genap" => "Genap", "ganjil" => "Ganjil"),
-            );
+        );
 
         $this->page->konten = $this->parser->parse($this->views_dir.'form_kalendar_akademik', $array, true);
     }
 
-    function edit($id = false){
+    function form_edit_kalendar_akademik(){
 
         if($_POST){
             $id = mysql_real_escape_string($this->input->post('id'));
-
             if (!$id){redirect("admin/admin_kalendar_akademik/list_kalendar_akademik");}
-
             $fields = $this->input->post(NULL, TRUE);
             $this->db->update('kalendar_akademik', $fields, array('id' => $id));
             redirect(base_index().'admin/admin_kalendar_akademik/list_kalendar_akademik');
         }
-        else{
-            $id = kal2int(mysql_real_escape_string(urinext('edit')));
-            if (!$id){redirect("admin/admin_kalendar_akademik/list_kalendar_akademik");}
 
-        }
-
+        $id = kal2int(mysql_real_escape_string(urinext('form_edit_kalendar_akademik')));
+        if (!$id){redirect("admin/admin_kalendar_akademik/list_kalendar_akademik");}
         $row = (array)out_row("select * from kalendar_akademik where id = ".$id. " limit 1");
-
         if(count($row) < 1 and $id < 1){redirect(base_url().'admin/admin_kalendar_akademik/list_kalendar_akademik');}
 
         $query_fakultas = out_where("select * from fakultas order by nama asc");
@@ -116,14 +113,46 @@ class admin_kalendar_akademik extends CI_Model {
 
         $array = array(
             'page_title' => 'Update Kalendar Akademik',
-            'action' => base_index().'admin/admin_kalendar_akademik/edit',
+            'action' => base_index().'admin/admin_kalendar_akademik/form_edit_kalendar_akademik',
             'link_back' => anchor("admin/admin_kalendar_akademik/list_kalendar_akademik", "Back", "class='btn btn-gebo btn-small'"),
+            'id_kalendar_akademik' => $row["id"],
+            'dropdown_fakultas' => form_dropdown("fakultas_kode",$row_fakultas, $row["fakultas_kode"], "id='fakultas_kode'"),
+            'dropdown_programstudi' => form_dropdown("programstudi_kode",$row_programstudi,$row["programstudi_kode"], "id='programstudi_kode'"),
+            'dropdown_semester' => form_dropdown("semester",array("genap" => "Genap", "ganjil" => "Ganjil"),$row["semester"], "id='semester'"),
+            'tahun_akademik' => $row["tahun_akademik"],
             'row_fakultas' => $row_fakultas,
             'row_programstudi' => $row_programstudi,
-            'row_kalendar_akademik' => $row,
-            'row_semester' => array("genap" => "Genap", "ganjil" => "Ganjil"),
         );
 
         $this->page->konten = $this->parser->parse($this->views_dir.'form_kalendar_akademik', $array, true);
+    }
+
+    /*
+     * get a last record or few kalendar akademik */
+    function get_kalendar_akademik($fakultas_kode = false, $programstudi = false, $year = false, $semester = false){
+
+        if ($fakultas_kode){
+            $this->db->where("fakultas_kode" ,$fakultas_kode);
+        }
+
+        if ($programstudi){
+            $this->db->where("programstudi" ,$programstudi);
+        }
+
+        if ($year){
+            $this->db->where("year" ,$year);
+        }
+        if ($semester){
+            $this->db->where("semester" ,$semester);
+        }
+
+        $query = $this->db->get("kalendar_akademik");
+        if ($query->num_rows() > 0){
+            return $this->db->result();
+        }
+        else{
+            return false;
+        }
+
     }
 }
