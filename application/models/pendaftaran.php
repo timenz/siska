@@ -25,13 +25,28 @@ class pendaftaran extends CI_Model {
             'assets_url' => $this->page->assets_url,
             'row' => $row,
             'base_index' => base_index(),
+            'action' => base_index().'pendaftaran/simpan_pendaftaran',
             'propinsi' => (array)out_where('geo_propinsi'),
             'jenjang_pendidikan' => (array)out_where('jenjang_pendidikan'),
             'progdi' => (array)out_where("select a.*, b.nama as fname from programstudi a left join fakultas b on a.fakultas_kode = b.kode"),
             'jenis_pendaftaran' => (array)out_where('jenis_pendaftaran'),
+            'valid' => false
         );
         $this->page->title = 'Form Pendaftaran';
         $this->page->konten = $this->parser->parse($this->views_dir.'form_pendaftaran', $array, true);
+    }
+
+    function simpan_pemdaftaran(){
+
+        $array = array(
+            'tanggal_register' => date('Y-m-d H:i:s'),
+            'nama' => $this->input->post('nama'),
+            'telp' => $this->input->post('telp'),
+            'programstudi_kode' => $this->input->post('programstudi_kode'),
+            'email' => $this->input->post('email'),
+            'password' => md5($this->input->post('password')),
+        );
+        redirect(base_index().'pendaftaran/form_pendaftaran');
     }
 
     function form_registrasi(){
@@ -51,7 +66,7 @@ class pendaftaran extends CI_Model {
         $email = $this->input->post('email');
 
         if(!cek_captcha()){
-            redirect(base_index().'pendaftaran/pesan_registrasi/wrongc/', 'refresh');
+            //redirect(base_index().'pendaftaran/pesan_registrasi/wrongc/', 'refresh');
             return;
         }
 
