@@ -31,8 +31,8 @@ foreach($row_karyawan as $row){
             <input type="hidden" name="id" value="{id}">
             <fieldset>
                 <div class="control-group formSep">
-                    <label class="control-label">NIP</label>
-                    <div class="controls"><input type="text" name="nip" class="input-xlarge" value="{nip}">
+                    <label class="control-label">NID</label>
+                    <div class="controls"><input type="text" name="nid" class="input-xlarge" value="{nid}">
                     </div>
                 </div>
                 <div class="control-group formSep">
