@@ -18,8 +18,8 @@ foreach($row_karyawan as $row){
         <form method="post" action="{action}" class="form-horizontal">
             <fieldset>
                 <div class="control-group formSep">
-                    <label class="control-label">NIP</label>
-                    <div class="controls"><input type="text" name="nip" class="input-xlarge">
+                    <label class="control-label">NID</label>
+                    <div class="controls"><input type="text" name="nid" class="input-xlarge">
                     </div>
                 </div>
                 <div class="control-group formSep">
