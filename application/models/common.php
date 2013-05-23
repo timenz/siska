@@ -6,7 +6,7 @@ class common extends CI_Model {
         parent::__construct();
         $this->view_dir = $this->page->tpl.'common/';
     }
-    
+
     function homepage(){
         $this->page->title = 'Home Sistem Akademik';
         $this->page->set_slider = true;
@@ -28,10 +28,12 @@ class common extends CI_Model {
     }
 
     function contact_us(){
-        $this->page->title = 'Hubungi Kami';
+        $this->page->title = 'Buku Tamu';
         $this->page->set_sidebar = true;
+        $row = out_where("select * from bukutamu order by tgl_posting desc, id desc limit 10");
         $array = array(
-            'assets_url' => $this->page->assets_url
+            'assets_url' => $this->page->assets_url,
+            'row_bukutamu' => $row
         );
         $this->page->konten = $this->parser->parse($this->view_dir.'contact_us2', $array, true);
     }
@@ -51,7 +53,7 @@ class common extends CI_Model {
     }
 
 
-    
+
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

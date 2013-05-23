@@ -46,12 +46,6 @@ class admin_buku_tamu extends CI_Model {
     }
 
     function reply($id = false){
-        $id = kal2int(mysql_real_escape_string(urinext('reply')));
-        if (!$id){redirect("admin/admin_buku_tamu/list_buku_tamu");}
-
-        $arr_in['is_read'] = 1;
-        $this->db->update('bukutamu', $arr_in, array('id' => $id));
-
         if($_POST){
             $id = mysql_real_escape_string($this->input->post('id'));
 
@@ -67,7 +61,9 @@ class admin_buku_tamu extends CI_Model {
             redirect(base_index().'admin/admin_buku_tamu/list_buku_tamu');
         }
 
-
+        $id = kal2int(mysql_real_escape_string(urinext('reply')));
+        $arr_in['is_read'] = 1;
+        $this->db->update('bukutamu', $arr_in, array('id' => $id));
 
         $row = (array)out_row("select * from bukutamu where id = ".$id. " limit 1");
 
