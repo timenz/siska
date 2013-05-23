@@ -62,6 +62,9 @@ class mahasiswa extends CI_Model {
 
         if(count($row) > 0){
             $this->session->set_userdata($ses, $row->id);
+            if($tb == 'calon_mahasiswa'){
+                redirect(base_index().'pendaftaran/form_pendaftaran', 'refresh');
+            }
         }
 
         redirect(base_index().'mahasiswa/login_form', 'refresh');
