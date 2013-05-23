@@ -33,33 +33,20 @@
                     </div>
                 </div>
 
-                <?php if (isset($row_bukutamu) and !empty($row_bukutamu)):?>
-                <div class="span8">
-                    <h3><span class="colored">///</span> Daftar Pesan</h3>
-                    <?php foreach($row_bukutamu as $bukutamu):?>
-                        <blockquote>
-                            <p><?php echo $bukutamu->message; ?></p>
-                             <small><?php echo date("F j, Y", strtotime($bukutamu->tgl_posting)); ?> <cite><?php echo $bukutamu->nama; ?></cite></small>
-                        </blockquote>
+                <div id="list_bukutamu"></div>
 
-                        <?php if ($bukutamu->is_reply):?>
-                            <blockquote class="pull-right":>
-                                <p><?php echo $bukutamu->reply_message; ?></p>
-                                <small>Admin</small>
-                            </blockquote>
-                            <br style="clear: both;"/>
-                        <?php endif; ?>
-
-                        <hr class="clear clearfix" style=" display:block; clear: both;"/>
-                    <?php endforeach; ?>
-                </div>
-                <?php endif; ?>
         </div>
     </section>
 </div>
 
-<script>
+<script type="text/javascript">
+    get_list_comment = function (){
+        jQuery.get(base_index + 'common/list_pesan_bukutamu',{},function(resp){
+            jQuery("#list_bukutamu").html(resp).fadeIn();
+        });
+    }
     jQuery(document).ready(function($){
+        get_list_comment();
         $('#btn_bukutamu').click(function(e){
             e.preventDefault();
 
@@ -69,6 +56,7 @@
                         $(".alert").remove();
                         if (resp.status == "success"){
                             $("#fields").prepend("<div class='alert alert-success'><a class='close' data-dismiss='alert'>×</a>"+ resp.message +"</div>");
+                            get_list_comment();
                         }
                         else{
                             $("#fields").prepend("<div class='alert alert-success'><a class='close' data-dismiss='alert'>×</a>"+ resp.message +"</div>");

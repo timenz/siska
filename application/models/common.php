@@ -30,12 +30,20 @@ class common extends CI_Model {
     function contact_us(){
         $this->page->title = 'Buku Tamu';
         $this->page->set_sidebar = true;
-        $row = out_where("select * from bukutamu order by tgl_posting desc, id desc limit 10");
         $array = array(
             'assets_url' => $this->page->assets_url,
-            'row_bukutamu' => $row
         );
         $this->page->konten = $this->parser->parse($this->view_dir.'contact_us2', $array, true);
+    }
+
+    function list_pesan_bukutamu(){
+        $row = out_where("select * from bukutamu order by tgl_posting desc, id desc limit 10");
+        $array = array(
+
+            'row_bukutamu' => $row
+        );
+
+        exit($this->parser->parse($this->view_dir.'list_bukutamu', $array));
     }
 
     function get_listkota(){
