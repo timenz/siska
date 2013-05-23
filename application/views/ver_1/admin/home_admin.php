@@ -237,6 +237,14 @@
                     $( "#tgl_kegiatan_start" ).datepicker( "option", "maxDate", selectedDate );
                 }
             });
+
+            $( ".datepicker" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                beforeShowDay: $.datepicker.noWeekends,
+                dateFormat: 'yy-mm-dd',
+                numberOfMonths: 3
+            });
         });
 
     });

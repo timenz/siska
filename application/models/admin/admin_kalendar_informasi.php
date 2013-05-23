@@ -168,8 +168,11 @@ class admin_kalendar_informasi extends CI_Model {
 
     function  hapus(){
         $id = kal2int(mysql_real_escape_string(urinext('hapus')));
-        if (!$id){redirect("admin/admin_kalendar_informasi/list_kalendar_informasi");}
-        $this->db->delete("kalendar_informasi", array("id" => $id));
+
+        if ($id){
+            $this->db->delete("kalendar_informasi", array("id" => $id));
+        }
+
 
         $this->page->konten = "";
         redirect("admin/admin_kalendar_informasi/list_kalendar_informasi");
