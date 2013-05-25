@@ -4,32 +4,59 @@
 
 
 <?php
+
+$tgl_lahir = to_epochtime($row['tgl_lahir']);
+
+if($tgl_lahir < 1){
+    $tgl_lahir = time();
+}
+
 $opt_tgl = '';
 for($i = 1; $i < 32; $i++){
-    $opt_tgl .= '<option value="'.$i.'">'.$i.'</option>';
+    $sel = '';
+    if(date('j', $tgl_lahir) == $i){
+        $sel = 'selected="selected"';
+    }
+    $opt_tgl .= '<option '.$sel.' value="'.$i.'">'.$i.'</option>';
 }
 
 $opt_bulan = '';
 $arr_bulan = array('', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember');
 for($i = 1; $i < 13; $i++){
-    $opt_bulan .= '<option value="'.$i.'">'.$arr_bulan[$i].'</option>';
+    $sel = '';
+    if(date('n', $tgl_lahir) == $i){
+        $sel = 'selected="selected"';
+    }
+    $opt_bulan .= '<option '.$sel.' value="'.$i.'">'.$arr_bulan[$i].'</option>';
 }
 
 $opt_thn = '';
 $min = date('Y') - 15;
 $span = 40;
 for($i = $min; $i > $min - $span; $i--){
-    $opt_thn .= '<option value="'.$i.'">'.$i.'</option>';
+    $sel = '';
+    if(date('Y', $tgl_lahir) == $i){
+        $sel = 'selected="selected"';
+    }
+    $opt_thn .= '<option '.$sel.' value="'.$i.'">'.$i.'</option>';
 }
 
 $opt_prop = '<option></option>';
 foreach($propinsi as $prop){
-    $opt_prop .= '<option value="'.$prop->id.'">'.$prop->nama_propinsi.'</option>';
+    $sel = '';
+    if($row['propinsi_id'] != '' and $row['propinsi_id'] == $prop->id){
+        $sel = 'selected="selected"';
+    }
+    $opt_prop .= '<option '.$sel.' value="'.$prop->id.'">'.$prop->nama_propinsi.'</option>';
 }
 
 $opt_jen = '<option></option>';
 foreach($jenjang_pendidikan as $prop){
-    $opt_jen .= '<option value="'.$prop->id.'">'.$prop->jenjang_pendidikan.'</option>';
+    $sel = '';
+    if($row['jenjang_pendidikan_id'] != '' and $row['jenjang_pendidikan_id'] == $prop->id){
+        $sel = 'selected="selected"';
+    }
+    $opt_jen .= '<option '.$sel.' value="'.$prop->id.'">'.$prop->jenjang_pendidikan.'</option>';
 }
 
 $opt_progdi = '<option></option>';
@@ -106,7 +133,7 @@ foreach($jenis_pendaftaran as $prop){
                         <div class="control-group">
                             <label class="control-label" for="alamat">Alamat</label>
                             <div class="controls">
-                                <textarea class="input-xlarge" id="alamat" name="alamat" rows="3"> <?php echo $row['alamat']; ?></textarea>
+                                <textarea class="input-xlarge validate[required]" id="alamat" name="alamat" rows="3"><?php echo $row['alamat']; ?></textarea>
                             </div>
                         </div>
 
@@ -120,14 +147,14 @@ foreach($jenis_pendaftaran as $prop){
                         <div class="control-group">
                             <label class="control-label" for="jenjang_pendidikan_id">Jenjang Pendidikan</label>
                             <div class="controls">
-                                <select id="jenjang_pendidikan_id" name="jenjang_pendidikan_id"><?php echo $opt_jen; ?></select>
+                                <select id="jenjang_pendidikan_id" name="jenjang_pendidikan_id" class="select validate[required]"><?php echo $opt_jen; ?></select>
                             </div>
                         </div>
 
                         <div class="control-group">
                             <label class="control-label" for="jenis_kelamin">Jenis Kelamin</label>
                             <div class="controls">
-                                <select id="jenis_kelamin" name="" class="span2"><option value="L">Laki-Laki</option>
+                                <select id="jenis_kelamin" name="jenis_kelamin" class="span2"><option value="L">Laki-Laki</option>
                                     <option value="P">Perempuan</option></select>
                             </div>
                         </div>
@@ -139,26 +166,26 @@ foreach($jenis_pendaftaran as $prop){
                             </div>
                         </div>
 
-                        <div class="control-group">
+                        <!--<div class="control-group">
                             <label class="control-label" for="asal_universitas">Asal Universitas</label>
                             <div class="controls">
                                 <input type="text" class="input validate[required] span3" id="asal_universitas" name="asal_universitas" value="<?php echo $row['asal_universitas']; ?>">
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="control-group">
                             <label class="control-label" for="transkrip_nilai">Nilai Transkrip</label>
                             <div class="controls">
-                                <input type="file" class="input validate[required] span3" id="transkrip_nilai" name="transkrip_nilai" value="<?php echo $row['transkrip_nilai']; ?>">
+                                <input type="text" class="input validate[required] span1" id="transkrip_nilai" name="transkrip_nilai" value="<?php echo $row['transkrip_nilai']; ?>">
                             </div>
                         </div>
 
-                        <div class="control-group">
+                        <!--<div class="control-group">
                             <label class="control-label" for="kshu">Nilai SKHU</label>
                             <div class="controls">
-                                <input type="file" class="input validate[required] span3" id="skhu" name="skhu" value="<?php echo $row['skhu']; ?>">
+                                <input type="text" class="input validate[required] span1" id="skhu" name="skhu" value="<?php echo $row['skhu']; ?>">
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="control-group">
                             <label class="control-label" for="programstudi_kode">Program Studi</label>
@@ -167,19 +194,19 @@ foreach($jenis_pendaftaran as $prop){
                             </div>
                         </div>
 
-                        <div class="control-group">
+                        <!--<div class="control-group">
                             <label class="control-label" for="jenis_pendaftaran_id">Jenis Pendaftaran</label>
                             <div class="controls">
                                 <select id="jenis_pendaftaran_id" name="jenis_pendaftaran_id"><?php echo $opt_jenisdaftar; ?></select>
                                 <p class="help-block">namanya di isi lengkap ya</p>
                             </div>
-                        </div>
+                        </div>-->
 
 
                         <div class="form-actions">
                             <button type="submit" class="btn btn-success">Simpan</button>
                             <?php if($valid){ ?>
-                            <button type="button" class="btn btn-warning" id="daftar">Daftar Sekarang</button>
+                            <a type="button" href="{base_index}post/pendaftaran/set_mendaftar" class="btn btn-warning" id="daftar">Daftar Sekarang</a>
                             <?php } ?>
                         </div>
                     </fieldset>
@@ -198,10 +225,8 @@ foreach($jenis_pendaftaran as $prop){
         $('#daftar').click(function(e){
             var konpirm = confirm('Yakin untuk mendaftar ?,, Perhatian..,setelah mendaftar data sudah tidak bisa diedit kembali.');
 
-            e.preventDefault();
-            if(!konpirm){return;}
-            console.log('asdasdhfasjhgfliaw');
-            alert('Terima kasih sudah mendaftar,, silakan cetak surat2 untuk proses selanjutnya.');
+
+            if(!konpirm){e.preventDefault();}
 
         });
 

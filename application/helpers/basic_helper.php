@@ -150,4 +150,44 @@ function kal2int($words) {
     return ;
 }
 
+//function 'Y-m-d h:m:s' to unix / epoch time
+function to_epochtime($data) {
+    if ($data == '' or $data == '0000-00-00' or $data == '0000-00-00 00:00:00') {
+        return false;
+    }
+    $mode = '';
+    if (filter_var($data, FILTER_VALIDATE_FLOAT)) {
+
+        return $data;
+    } elseif (preg_match('[-]', $data)) {
+        $data = str_replace('-', ' ', $data);
+    } elseif (preg_match('[/]', $data)) {
+        $data = str_replace('/', ' ', $data);
+    } else {
+        return false;
+    }
+    $set = explode(' ', $data);
+    if (count($set) >= 3) {
+        if (strlen($set[0]) == 4) {
+            if (empty($set[3])) {
+                $set[3] = '0:0:0';
+            }
+            $time = explode(":", $set[3]);
+            $tgl = mktime($time[0], $time[1], $time[2], $set[1], $set[2], $set[0]);
+            return $tgl;
+        } elseif (strlen($set[2]) == 4) {
+            if (empty($set[3])) {
+                $set[3] = '0:0:0';
+            }
+            $time = explode(":", $set[3]);
+            $tgl = mktime($time[0], $time[1], $time[2], $set[1], $set[0], $set[2]);
+            return $tgl;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
 // eof
