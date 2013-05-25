@@ -4,6 +4,11 @@
         <?php if(isset($link_add) and count($link_add) > 1){ ?>
         <a class="btn btn-success" href="<?php echo $link_add['link']; ?>"><?php echo $link_add['name']; ?></a>
         <?php } ?>
+
+        <form action="{action}" method="post" id="filter_table">
+            <input type="text" name="keyword" id="keyword" value="{keyword}" placeholder="keywords">
+            <input type="submit" value="filter" class="btn btn-primary">
+        </form>
     </div>
     <div>
         <table class="table table-striped">

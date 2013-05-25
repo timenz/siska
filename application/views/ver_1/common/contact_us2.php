@@ -8,7 +8,7 @@
                         <h4><span class="colored">///</span> Silahkan Isi  Buku Tamu</h4>
                         <p>Valera is designed to help people of all skill levels designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
                         <hr>
-                        <span><strong class="colored"> Aress:</strong> 123456 Street Name, Los Angeles</span>
+                        <span><strong class="colored">Aress:</strong> 123456 Street Name, Los Angeles</span>
                         <br>
                         <span><strong class="colored">Phone:</strong> (1800) 765-4321</span>
                         <br>
@@ -26,6 +26,8 @@
                         <form class="form" id="ajax-contact-form" action="">
                             <input type="text" id="nama" name="nama" class="span4" style="margin-right:25px;" placeholder="Nama" />
                             <input class="span4" id="email" name="email" placeholder="Email, tidak akan ditampilkan" />
+                            <input type="text" id="alamat" name="alamat" class="span4" style="margin-right:25px;" placeholder="Alamat" />
+                            <input class="span4" id="telp" name="telp" placeholder="Nomor yang bisa dihubungi" />
                             <input class="span8" id="subject" name="subject" placeholder="Subject" />
                             <textarea type="text" id="message" name="message" placeholder="Pesan" rows="8" class="span8"></textarea>
                             <button type="submit" class="btn btn-success" id="btn_bukutamu">Send message</button>

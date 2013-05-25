@@ -37,7 +37,7 @@ class common extends CI_Model {
     }
 
     function list_pesan_bukutamu(){
-        $row = out_where("select * from bukutamu order by tgl_posting desc, id desc limit 10");
+        $row = out_where("select * from bukutamu where is_publish = '1' order by tgl_posting desc, id desc limit 10");
         $array = array(
 
             'row_bukutamu' => $row

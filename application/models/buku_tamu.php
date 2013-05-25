@@ -36,6 +36,7 @@ class buku_tamu extends CI_Model {
         {
             $fields = $this->input->post(null, true);
             $fields["tgl_posting"] = date("Y-m-d H:i:s");
+            $fields["is_publish"] = "1";
             $this->db->insert("bukutamu", $fields);
 
             if ($this->db->affected_rows()){
