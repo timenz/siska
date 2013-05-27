@@ -103,6 +103,10 @@ class pendaftaran extends CI_Model {
             'status_pmb' => 'register',
         );
 
+        if($this->input->post('kota_kab_id') > 0){
+            $array['kota_kab_id'] = $this->input->post('kota_kab_id');
+        }
+
         $this->db->update('calon_mahasiswa', $array, array('id' => $this->input->post('id')));
         redirect(base_index().'pendaftaran/d_dashboard', 'refresh');
     }
