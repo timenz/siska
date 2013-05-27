@@ -60,6 +60,10 @@ foreach($row_dosen as $row){
                             <option value="8">8</option>
                         </select></div>
                 </div>
+                <div class="control-group formSep">
+                    <label class="control-label">Keterangan</label>
+                    <div class="controls"><textarea id="keterangan" name="keterangan"><?php echo $keterangan; ?></textarea> </div>
+                </div>
                 <div class="control-group">
                     <div class="controls"><input class="btn btn-gebo" type="submit" value="edit"></div>
                 </div>
