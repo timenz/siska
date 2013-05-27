@@ -49,6 +49,7 @@ class admin_makul extends CI_Model {
             'dosenkoordinator_id' => $this->input->post('dosenkoordinator_id'),
             'nama' => $this->input->post('nama'),
             'semester' => $this->input->post('semester'),
+            'keterangan' => $this->input->post('keterangan'),
         );
 
         $this->db->insert('matakuliah', $array);
@@ -69,6 +70,7 @@ class admin_makul extends CI_Model {
             'programstudi_kode' => $row->programstudi_kode,
             'dosenkoordinator_id' => $row->dosenkoordinator_id,
             'semester' => $row->semester,
+            'keterangan' => $row->keterangan,
             'row_fakultas' => out_where('fakultas', array()),
             'row_prodi' => out_where('programstudi', array()),
             'row_dosen' => out_where('select a.id as id, b.nama as nama from dosen as a, karyawan as b where a.karyawan_id = b.id'),
@@ -88,6 +90,7 @@ class admin_makul extends CI_Model {
             'dosenkoordinator_id' => $this->input->post('dosenkoordinator_id'),
             'nama' => $this->input->post('nama'),
             'semester' => $this->input->post('semester'),
+            'keterangan' => $this->input->post('keterangan'),
         );
 
         $this->db->update('matakuliah', $array, array('id' => $id));
@@ -98,3 +101,4 @@ class admin_makul extends CI_Model {
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
+
