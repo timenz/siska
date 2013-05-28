@@ -28,6 +28,24 @@ class admin_pendaftaran extends CI_Model {
     }
 
     function konfirmasi_pembayaran_accepted(){
+        $rows = out_where("select a.*, b.nama, c.nama as kary_nama from konfirmasi_pembayaran a, calon_mahasiswa b, karyawan c where a.calon_mahasiswa_id = b.id and a.karyawan_id = c.id and status = 'reject' order by id desc limit 1000");
+        $konten = array();
+        $no = 1;
+        foreach($rows as $row){
+            $konten[] = array($no, $row->tgl_konfirmasi, $row->nama, $row->no_transaksi_transfer, $row->bank, $row->tgl_validasi, $row->kary_nama);
+            $no++;
+        }
+
+        $array = array(
+            'heading' => array('#', 'Tanggal Konfirmasi', 'Nama Calon', 'No Transaksi Transfer', 'Nama Bank', 'Tgl Validasi', 'Karyawan'),
+            'konten' => $konten,
+            'page_title' => 'Konfirmasi Pembayaran biaya Pendaftaran Accepted',
+            'link_add' => array()
+        );
+        $this->page->konten = $this->parser->parse($this->page->tpl.'listing', $array, true);
+    }
+
+    function konfirmasi_pembayaran_rejected(){
         $rows = out_where("select a.*, b.nama, c.nama as kary_nama from konfirmasi_pembayaran a, calon_mahasiswa b, karyawan c where a.calon_mahasiswa_id = b.id and a.karyawan_id = c.id and status = 'accept' order by id desc limit 1000");
         $konten = array();
         $no = 1;
@@ -107,6 +125,10 @@ class admin_pendaftaran extends CI_Model {
             'link_add' => array()
         );
         $this->page->konten = $this->parser->parse($this->page->tpl.'listing', $array, true);
+    }
+
+    function detail_calon_mahasiswa(){
+        $this->page->konten = 'Halaman ini masih dalam proses develop';
     }
 
     function form_input_ujiandaftar(){
