@@ -52,7 +52,11 @@ class admin_kalendar_akademik extends CI_Model {
         if($_POST){
             $fields = $this->input->post(NULL, TRUE);
             unset($fields["id"]);
-            $this->db->insert('kalendar_akademik', $fields);
+            $query = $this->db->where($fields)->get("kalendar_akademik", "1");
+            if ($query->num_rows() == 0){
+                $this->db->insert('kalendar_akademik', $fields);
+            }
+
             redirect(base_index().'admin/admin_kalendar_akademik/list_kalendar_akademik');
         }
 
@@ -90,7 +94,12 @@ class admin_kalendar_akademik extends CI_Model {
             $id = mysql_real_escape_string($this->input->post('id'));
             if (!$id){redirect("admin/admin_kalendar_akademik/list_kalendar_akademik");}
             $fields = $this->input->post(NULL, TRUE);
-            $this->db->update('kalendar_akademik', $fields, array('id' => $id));
+            unset($fields["id"]);
+            $query = $this->db->where($fields)->get("kalendar_akademik", "1");
+            if ($query->num_rows() == 0){
+                $this->db->update('kalendar_akademik', $fields, array('id' => $id));
+            }
+
             redirect(base_index().'admin/admin_kalendar_akademik/list_kalendar_akademik');
         }
 
