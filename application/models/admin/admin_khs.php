@@ -21,33 +21,43 @@ class admin_khs  extends CI_Model {
             $no2++;
         }
 
-        //query untuk nama jadwal
-        $rows3 = out_where("select d.nama as hari,i.nama, c.ruang as ruang, c.jam_in as jamin, c.jam_out as jamout
-                            from jadwal_mahasiswa as a, jadwal_krs as b, penjadwalan as c, weekday as d, matkul_dosen as e,
-                                dosen as f, karyawan as g, web_user as h, matakuliah as i, kalendar_akademik as j
-                            where d.id=c.weekday_id and c.id=b.penjadwalan_id and b.id=a.jadwal_krs_id and b.matkul_dosen_id=e.id
-                                  and e.dosen_id=f.id and f.karyawan_id=g.id and h.id_karyawan = g.id and h.id = \"".$iduser."\"
-                                  and e.matakuliah_id=i.id and j.id=a.kalendar_akademik_id");
-        $konten3 = array();
-        $no3=1;
-
-        foreach (@$rows3 as $row3) {
-            $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/admin_khs/form_add_nilai/'.int2kal($row->id).'">Tambah Nilai</a></div>';
-            $konten3 [] = array ($row3->hari, $row3->nama, $row3->ruang , $row3->jamin, $row3->jamout);
-            $no3++;
-        }
 
         //query untuk daftar nama mahasiswa
-        $rows = out_where("select mahasiswa.nim, calon_mahasiswa.nama
-                            from mahasiswa, calon_mahasiswa
-                            where mahasiswa.calon_mahasiswa_id=calon_mahasiswa.id");
+        //d.id='5' seharusnya diambil dari selection.... berhubung belum bisa, so.... agak maksa, di buat static dulu...
+        $rows = out_where("select a.nim, b.nama
+                            from mahasiswa as a, calon_mahasiswa as b, jadwal_mahasiswa as c, jadwal_krs as d
+                            where a.calon_mahasiswa_id=b.id and a.id=c.mahasiswa_id and c.jadwal_krs_id=d.id and d.id='5'");
         $konten = array();
         $no=1;
 
+
         foreach (@$rows as $row) {
-            $nilai = '<input type="text" name="nilai" class="input-xlarge">';
-            $konten [] = array ($no, $row->nim, $row->nama, $nilai);
+            //query untuk nilai
+            $query_nilai = out_where ("select nama, id from grade ");
+
+            foreach($query_nilai as $nilai){
+                $rownilai[$nilai->id] = $nilai->nama;
+            }
+
+            //$nilai = '<input type="text" name="nilai" class="input-xlarge">';
+            $konten [] = array ($no, $row->nim, $row->nama, (form_dropdown("grade_id", $rownilai ,"", "id='grade_id' ")));
             $no++;
+        }
+
+
+
+
+        //query untuk nama jadwal
+
+        $query_jadwal = out_where("   select b.id as id, d.nama as hari,i.nama, c.ruang as ruang, c.jam_in as jamin, c.jam_out as jamout
+                            from jadwal_krs as b, penjadwalan as c, weekday as d, matkul_dosen as e,
+                                dosen as f, karyawan as g, web_user as h, matakuliah as i
+                            where d.id=c.weekday_id and c.id=b.penjadwalan_id and b.matkul_dosen_id=e.id
+                                  and e.dosen_id=f.id and f.karyawan_id=g.id and h.id_karyawan = g.id and h.id = \"".$iduser."\"
+                                  and e.matakuliah_id=i.id");
+
+        foreach($query_jadwal as $jadwal){
+            $row_jadwal[$jadwal->id] = $jadwal->nama." - ".$jadwal->ruang." - ".$jadwal->jamin." - ".$jadwal->jamout ;
         }
 
 
@@ -56,12 +66,12 @@ class admin_khs  extends CI_Model {
         //untuk di tampilkan
         $array = array(
             'heading' => array('#', 'NIM', 'NAMA MAHASISWA', 'NILAI'),
-            'heading3' => array('hari', 'makul', 'ruang', 'jam masuk', 'jam keluar', ),
             'konten' => $konten,
             'page_title' => 'FORM TAMBAH NILAI',
             'title2' => 'Jadwal:',
             'konten2' => $konten2,
-            'konten3' => $konten3,
+
+            'dropdown_jadwal'=> form_dropdown("jadwal_krs_id",$row_jadwal,"", "id='jadwal_krs_id' "),
 
         );
 
@@ -77,10 +87,34 @@ class admin_khs  extends CI_Model {
 
     // untuk melihat nilai
     function look_khs(){
+        $rows = out_where("select a.nama, f.nama as nilai, f.bobot, b.sks
+                            from matakuliah as a, matkul_dosen as b, jadwal_krs as c,jadwal_mahasiswa as d, khs as e, grade as f
+                            where a.id=b.matakuliah_id and b.id=c.matkul_dosen_id and c.id=d.jadwal_krs_id and d.id=e.jadwal_mahasiswa_id
+                                and e.grade_id=f.id and d.mahasiswa_id='2'");//
+        $konten = array();
+        $no=1;
+        $total=0;
+        $tot_sks=0;
+
+        foreach (@$rows as $row) {
+            $konten [] = array ($no, $row->nama, $row->nilai, $row->bobot, $row->sks);
+            $total=($row->bobot* $row->sks)+$total;
+            $tot_sks=$row->sks+$tot_sks;
+            $no++;
+        }
+        $ipk = $total / $tot_sks;
+        $array = array(
+            'page_title' => 'KARTU HASIL STUDY',
+            'ipk=' => 'IPK =',
+            'heading' => array('#', 'MAKUL', 'NILAI', 'BOBOT', 'SKS'),
+            'ipk' => $ipk,
+            'konten' => $konten,
+
+        );
+
         $this->page->konten = 'Halaman Admin Dosen';
+        $this->page->konten = $this->parser->parse($this->page->tpl.'khs/Form_lihat_khs.php',$array, true);
     }
 
-    function form_add_nilai(){
-        $this->page->konten = 'Halaman Admin Dosen';
-    }
+
 }
