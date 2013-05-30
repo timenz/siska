@@ -55,6 +55,7 @@
         //* hide all elements & show preloader
         //document.documentElement.className += 'jse';
     </script>
+    <script>var base_index = '<?php echo base_index(); ?>';</script>
 </head>
 <body>
 <!--<div id="loading_layer" style="display:none"><img src="{assets_url}img/ajax_loader.gif" alt="" /></div>-->

@@ -82,9 +82,16 @@ class admin_pendaftaran extends CI_Model {
         $id = mysql_real_escape_string($this->input->post('id'));
         $row = out_row('konfirmasi_pembayaran', array('id' => $id));
 
+
         $user = $this->page->data_user;
 
         if($id < 1 and count($row) < 1){
+            redirect(base_index().'admin/admin_pendaftaran/request_konfirmasi_pembayaran');
+        }
+
+        $cm = out_row('calon_mahasiswa', array('id' => $row->calon_mahasiswa_id));
+
+        if( count($cm) < 1){
             redirect(base_index().'admin/admin_pendaftaran/request_konfirmasi_pembayaran');
         }
 
@@ -92,6 +99,7 @@ class admin_pendaftaran extends CI_Model {
         $array = array(
             'status' => $this->input->post('status'),
             'tgl_validasi' => date('Y-m-d H:i:s'),
+            'no_ujian' => date('Y').'.'.$cm->programstudi_kode.'.00'.$cm->id,
             'karyawan_id' => $user->id_karyawan
         );
 
@@ -132,14 +140,67 @@ class admin_pendaftaran extends CI_Model {
     }
 
     function form_input_ujiandaftar(){
-        $rows = out_where("select a.* from calon_mahasiswa a where status_pmb = 'calon' order by id desc limit 100");
+        $rows = out_where("select a.* from calon_mahasiswa a where status_pmb = 'calon'
+         and email != ''
+         order by id desc limit 100");
         $konten = array();
         $no = 1;
         foreach($rows as $row){
-            $input = '<div class="btn-group"><input type="text"  style="width:60px;" /></div>';
+            $input = '<input type="text" class="nilai_'.$row->id.'"  style="width:60px;" />';
+            $link = '<a href="#" data="'.$row->id.'" class="btn btn-primary input_nilai" >simpan</a>';
+            $konten[] = array($no, $row->tanggal_register, $row->nama, $row->email,
+                $row->telp, $row->transkrip_nilai, $row->no_ujian,  $input, $link);
+            $no++;
+        }
+
+        $array = array(
+            'heading' => array('#', 'Tanggal Register', 'Nama Calon', 'Email', 'No Telp', 'Nilai Traskrip', 'No Ujian','Nilai Ujian', '#'),
+            'konten' => $konten,
+            'page_title' => 'Daftar calon Mahasiswa',
+            'link_add' => array()
+        );
+        $this->page->konten = $this->parser->parse($this->views_dir.'listing_input_nilai', $array, true);
+    }
+
+    function save_input_nilai(){
+        $array = array('valid' => false);
+        $this->page->konten = $array;
+
+        $id = mysql_real_escape_string($this->input->post('id'));
+        $row = out_row('calon_mahasiswa', array('id' => $id));
+
+        if($id < 1 and count($row) < 1){return;}
+
+        $nilai = $this->input->post('nilai');
+
+        $data = array(
+            'nilai_ujian' => $nilai,
+            'status_pmb' => 'lulus_ujian'
+        );
+
+        $array = array('valid' => true, 'status' => 'lulus ujian');
+
+        if($nilai < 7){
+            $data['status_pmb'] = 'gagal';
+            $array = array('valid' => true, 'status' => 'tidak lulus ujian');
+        }
+
+        $this->db->update('calon_mahasiswa', $data, array('id' => $id));
+
+        $this->page->konten = $array;
+    }
+
+    function form_daftar_ulang(){
+        $rows = out_where("select a.* from calon_mahasiswa a where status_pmb = 'lulus_ujian'
+         and email != ''
+         order by id desc limit 100");
+        $konten = array();
+        $no = 1;
+        foreach($rows as $row){
+            $link = '<a href="#" data="'.$row->id.'" class="btn btn-primary input_du" >simpan</a>';
 
             $konten[] = array($no, $row->tanggal_register, $row->nama, $row->email,
-                $row->telp, $row->transkrip_nilai, date('Y').'.'.$row->programstudi_kode.'.00'.$row->id,  $input);
+                $row->telp, $row->transkrip_nilai, $row->no_ujian, $link);
             $no++;
         }
 
@@ -149,7 +210,54 @@ class admin_pendaftaran extends CI_Model {
             'page_title' => 'Daftar calon Mahasiswa',
             'link_add' => array()
         );
-        $this->page->konten = $this->parser->parse($this->page->tpl.'listing', $array, true);
+        $this->page->konten = $this->parser->parse($this->views_dir.'listing_daftar_ulang', $array, true);
+    }
+
+    function save_daftar_ulang(){
+        $array = array('valid' => false);
+        $this->page->konten = $array;
+        $id = mysql_real_escape_string($this->input->post('id'));
+        $row = out_row('calon_mahasiswa', array('id' => $id));
+
+        if($id < 1 and count($row) < 1){return;}
+
+
+        $data = array(
+            'status_pmb' => 'mahasiswa'
+        );
+
+        $array = array('valid' => true, 'status' => 'lulus ujian');
+        $this->db->trans_start();
+        $this->db->update('calon_mahasiswa', $data, array('id' => $id));
+
+        $data = array(
+            'tanggal_daftar_ulang' => date('Y-m-d H:i:s'),
+            'tanggal_register' => $row->tanggal_register,
+            'nim' => date('Y').'-'.$row->programstudi_kode.'-00'.$row->id,
+            'nama' => $row->nama,
+            'tempat_lahir' => $row->tempat_lahir,
+            'tgl_lahir' => $row->tgl_lahir,
+            'jenis_kelamin' => $row->jenis_kelamin,
+            'propinsi_id' => $row->propinsi_id,
+            'kota_kab_id' => $row->kota_kab_id,
+            'alamat' => $row->alamat,
+            'kodepos' => $row->kodepos,
+            'telp' => $row->telp,
+            'asal_sekolah' => $row->asal_sekolah,
+            'transkrip_nilai' => $row->transkrip_nilai,
+            'nilai_ujian' => $row->nilai_ujian,
+            'programstudi_kode' => $row->programstudi_kode,
+            'email' => $row->email,
+            'password' => $row->password,
+            'tahun_masuk' => date('Y'),
+            'status_siswa' => 'aktif',
+            'email' => $row->email,
+        );
+
+        $this->db->insert('mahasiswa', $data);
+        $this->db->trans_complete();
+
+        $this->page->konten = $array;
     }
 
 
