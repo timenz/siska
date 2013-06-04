@@ -11,8 +11,15 @@
     </h4>
 </div>
 <div>
-        {title2}{dropdown_jadwal}
-
+    <form action="" method="post" >
+    <table class="table table-striped">
+        <tr>
+            <td>{title2}</td>
+            <td>{dropdown_jadwal}</td>
+            <td><input class="btn btn-gebo" type="submit" value="DAFTAR MAHASISWA"></td>
+        </tr>
+    </table>
+    </form>
         <form method="post" action="{action}" class="form-horizontal">
             <fieldset>
                 <div>

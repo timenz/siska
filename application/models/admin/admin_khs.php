@@ -21,12 +21,26 @@ class admin_khs  extends CI_Model {
             $no2++;
         }
 
+        //query untuk nama jadwal
+        $query_jadwal = out_where("   select b.id as id, d.nama as hari,i.nama, c.ruang as ruang, c.jam_in as jamin, c.jam_out as jamout
+                            from jadwal_krs as b, penjadwalan as c, weekday as d, matkul_dosen as e,
+                                dosen as f, karyawan as g, web_user as h, matakuliah as i
+                            where d.id=c.weekday_id and c.id=b.penjadwalan_id and b.matkul_dosen_id=e.id
+                                  and e.dosen_id=f.id and f.karyawan_id=g.id and h.id_karyawan = g.id and h.id = \"".$iduser."\"
+                                  and e.matakuliah_id=i.id");
+        $row_jadwal[""] = ":: matakuliah ::";
+        foreach($query_jadwal as $jadwal){
+            $row_jadwal[$jadwal->id] = $jadwal->nama." - ".$jadwal->ruang." - ".$jadwal->jamin." - ".$jadwal->jamout ;
+        }
+
 
         //query untuk daftar nama mahasiswa
-        //d.id='5' seharusnya diambil dari selection.... berhubung belum bisa, so.... agak maksa, di buat static dulu...
-        $rows = out_where("select a.nim, b.nama
+            //tombom daftar mhs
+            $id = (isset($_POST["jadwal_krs_id"]) and !empty($_POST["jadwal_krs_id"]))?$_POST["jadwal_krs_id"]:"";
+
+        $rows = out_where("select a.nim, b.nama, c.id
                             from mahasiswa as a, calon_mahasiswa as b, jadwal_mahasiswa as c, jadwal_krs as d
-                            where a.calon_mahasiswa_id=b.id and a.id=c.mahasiswa_id and c.jadwal_krs_id=d.id and d.id='5'");
+                            where a.calon_mahasiswa_id=b.id and a.id=c.mahasiswa_id and c.jadwal_krs_id=d.id and d.id='".$id."'");
         $konten = array();
         $no=1;
 
@@ -34,48 +48,38 @@ class admin_khs  extends CI_Model {
         foreach (@$rows as $row) {
             //query untuk nilai
             $query_nilai = out_where ("select nama, id from grade ");
-
+            $rownilai[""] = ":: nilai ::";
             foreach($query_nilai as $nilai){
                 $rownilai[$nilai->id] = $nilai->nama;
             }
 
-            //$nilai = '<input type="text" name="nilai" class="input-xlarge">';
+
             $konten [] = array ($no, $row->nim, $row->nama, (form_dropdown("grade_id", $rownilai ,"", "id='grade_id' ")));
             $no++;
         }
 
+        //insert khs
+        if (isset($_POST["Submit"]) and $_POST["Submit"] == "SAVE"){
+        $jadwal_mahasiswa_id= $_POST["jadwal_mahasiswa_id"];
+        $grade_id= $_POST["grade_id"];
 
 
-
-        //query untuk nama jadwal
-
-        $query_jadwal = out_where("   select b.id as id, d.nama as hari,i.nama, c.ruang as ruang, c.jam_in as jamin, c.jam_out as jamout
-                            from jadwal_krs as b, penjadwalan as c, weekday as d, matkul_dosen as e,
-                                dosen as f, karyawan as g, web_user as h, matakuliah as i
-                            where d.id=c.weekday_id and c.id=b.penjadwalan_id and b.matkul_dosen_id=e.id
-                                  and e.dosen_id=f.id and f.karyawan_id=g.id and h.id_karyawan = g.id and h.id = \"".$iduser."\"
-                                  and e.matakuliah_id=i.id");
-
-        foreach($query_jadwal as $jadwal){
-            $row_jadwal[$jadwal->id] = $jadwal->nama." - ".$jadwal->ruang." - ".$jadwal->jamin." - ".$jadwal->jamout ;
+            $simpankhs= out_where("insert khs set id='',jadwal_mahasiswa_id='$jadwal_mahasiswa_id', grade_id='$grade_id'");
         }
+
 
 
 
 
         //untuk di tampilkan
         $array = array(
+            'page_title' => 'FORM TAMBAH NILAI',
+            'konten2' => $konten2,
+            'title2' => 'Jadwal:',
+            'dropdown_jadwal'=> form_dropdown("jadwal_krs_id",$row_jadwal,"", "id='jadwal_krs_id' "),
             'heading' => array('#', 'NIM', 'NAMA MAHASISWA', 'NILAI'),
             'konten' => $konten,
-            'page_title' => 'FORM TAMBAH NILAI',
-            'title2' => 'Jadwal:',
-            'konten2' => $konten2,
-
-            'dropdown_jadwal'=> form_dropdown("jadwal_krs_id",$row_jadwal,"", "id='jadwal_krs_id' "),
-
         );
-
-        $this->page->konten = 'Halaman Admin untuk KHS';
 
         $this->page->konten = $this->parser->parse($this->page->tpl.'khs/Form_add_nilai.php',$array, true);
 
