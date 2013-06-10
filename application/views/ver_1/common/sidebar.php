@@ -2,6 +2,7 @@
 <div class="span4 side_bar">
     <section class="blog_cat">
         <div class="well">
+            <!--
             <h4><span class="colored">///</span> Blog Categories</h4>
             <hr>
             <ul class="nav nav-pills nav-stacked">
@@ -30,18 +31,12 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
 
             <section>
-                <h4><span class="colored">///</span> Pay attention!</h4>
+                <h4><span class="colored">///</span> Banner</h4>
                 <hr>
-                <div class="alert alert-block alert-success fade in">
-                    <h4 class="alert-heading">Oh snap! 50% SALE!</h4>
-                    <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                    <p>
-                        <a class="btn btn-success" href="#">Take this action</a> <a class="btn" href="#">Or do this</a>
-                    </p>
-                </div>
+                <div class="banner_image"><a href=""><img src="" /></a></div>
             </section>
 
         </div>

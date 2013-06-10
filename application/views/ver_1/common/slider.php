@@ -6,16 +6,17 @@
                 <div class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="{assets_url}img/slide1.jpg" />
+                            <img src="{assets_url}img/slide/1.jpg" />
                         </li>
                         <li>
-                            <a href="http://flex.madebymufffin.com"><img src="{assets_url}img/slide1-1.jpg" /></a>
+                            <img src="{assets_url}img/slide/2.jpg" />
                         </li>
                         <li>
-                            <img src="{assets_url}img/slide1-2.jpg" />
+                            <img src="{assets_url}img/slide/3.jpg" />
                         </li>
+
                         <li>
-                            <img src="{assets_url}img/slide1-3.jpg" />
+                            <img src="{assets_url}img/slide/4.jpg" />
                         </li>
                     </ul>
                 </div>
