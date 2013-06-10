@@ -1,6 +1,6 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
-class admin_jadwal extends CI_Model {
+class mhs_jadwal extends CI_Model {
     public function __construct() {
         parent::__construct();
         $this->views_dir = $this->page->tpl.'penjadwalan/';
@@ -22,23 +22,24 @@ class admin_jadwal extends CI_Model {
     }
 
     function isi_krs(){
-        $today=date('Y');
+//SELECT SEMESTER
         $this->page->title = 'HALAMAN ISI KRS';
         $iduser=$this->session->userdata("id_user");
         $user = out_row('select * from web_user join karyawan on karyawan.id = web_user.id_karyawan
                         where web_user.id = "'.$this->session->userdata("id_user").'" ');
 
+        $today=date('Y');
+        $tahun_masuk=out_where("select * from mahasiswa");
+        if($tahun_masuk->tahun_masuk == $today){
+            $semester= 1;
+        }
+
         $queries = out_where("select matakuliah.*, matkul_dosen.sks as matkul_dosen_sks
                             from matakuliah
                             join matkul_dosen on matkul_dosen.matakuliah_id = matakuliah.id");
 
-        $query_ruang = out_where("select * from penjadwalan order by ruang asc");
-        $row_penjadwalan[""] = "::Pilih Waktu";
-        foreach($query_ruang as $ruang){
-            $row_penjadwalan[$ruang->id] = $ruang->ruang;
-        }
 
-        $konten = array();
+//        $konten = array();
 
 //checkBox
 //        $query="select * from matakuliah join jadwal_krs on jadwal_krs.id = matakuliah.";
@@ -63,20 +64,27 @@ class admin_jadwal extends CI_Model {
 */
 
 //DROPDOWN
-        $dropdown_ruang = form_dropdown("penjadwalan_id",$row_penjadwalan, "", "id='penjadwalan_id'");
+        $query_waktu = out_where("select * from penjadwalan order by jam_in asc");
+        $row_penjadwalan[""][""] = "::Pilih Waktu";
+        foreach($query_waktu as $waktu){
+            $row_penjadwalan[$waktu->jam_in][$waktu->jam_in] = $waktu->jam_in;
+        }
+
+
+        $dropdown_waktu = form_dropdown("penjadwalan_id",$row_penjadwalan, "", "id='penjadwalan_id'");
         $link = '<div class="btn"><a role="button" data-toggle="modal" href = "'.base_index().'admin/admin_jadwal/isi_krs/#myModal" >View</a></div>';
 
-//        $smtr_mhs=out_where("select mahasiswa.tahun_masuk as mahasiswa_masuk, mahasiswa.nim as mahasiswa_nim from mahasiswa");
 
+//ISI VIEWS
         foreach($queries as $query){
-            $konten[] = array($item1, $query->nama, $query->matkul_dosen_sks, $dropdown_ruang, "", $link);
+            $konten[] = array($item1, $query->nama, $query->matkul_dosen_sks, $dropdown_waktu, "", $link);
         }
 
         $array = array(
-            'heading' => array('Pilih', 'Mata Kuliah', 'SKS', 'Ruang', 'Hari','Keterangan'),
-            'konten' => $konten,
+            'heading' => array('Pilih', 'Mata Kuliah', 'SKS', 'Waktu', 'Hari','Keterangan'),
+//            'konten' => $konten,
             'nim' => $iduser,
-//            'kategori' => ,
+            'semester' => $semester,
             'nama' => $user -> nama,
 
         );

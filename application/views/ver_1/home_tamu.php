@@ -92,6 +92,11 @@
 <!--SLIDER AREA-->
 {slider}
 <!--/SLIDER AREA-->
+
+<!--WELCOME AREA-->
+{welcome}
+<!--/WELCOME AREA-->
+
 <!--MAIN CONTENT AREA-->
 <div class="container inner_content">
     <div class="row">

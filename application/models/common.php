@@ -11,8 +11,11 @@ class common extends CI_Model {
         $this->page->title = 'Home Sistem Akademik';
         $this->page->set_slider = true;
         $this->page->set_sidebar = true;
+        $this->page->set_welcome = true;
+        $pengumuman = (array)out_where("select*from pengumuman_info order by id desc limit 5");
         $array = array(
-            'assets_url' => $this->page->assets_url
+            'assets_url' => $this->page->assets_url,
+            'pengumuman' => $pengumuman
         );
         $this->page->konten = $this->parser->parse($this->view_dir.'homepage', $array, true);
         //$this->buku_tamu->form_buku_tamu();

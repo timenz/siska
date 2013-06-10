@@ -15,6 +15,7 @@ class page extends CI_Model {
         $this->web_mode = 'no_login';
         $this->set_slider = false;
         $this->set_sidebar = false;
+        $this->set_welcome = false;
     }
     
     function get_data($mode = ''){
@@ -38,7 +39,8 @@ class page extends CI_Model {
             'model' => $this->model,
             'method' => $this->method,
             'slider' => $this->set_slider(),
-            'sidebar' => $this->set_sidebar()
+            'sidebar' => $this->set_sidebar(),
+            'welcome' => $this->set_welcome()
         );
 
 
@@ -105,6 +107,14 @@ class page extends CI_Model {
             'assets_url' => $this->page->assets_url
         );
         return $this->parser->parse($this->tpl.'common/sidebar', $array, true);
+    }
+
+    function set_welcome(){
+        if(!$this->set_welcome){return false;}
+        $array = array(
+            'assets_url' => $this->page->assets_url
+        );
+        return $this->parser->parse($this->tpl.'common/welcome', $array, true);
     }
     
 }

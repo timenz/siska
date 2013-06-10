@@ -80,7 +80,7 @@ class pendaftaran extends CI_Model {
     function simpan_pendaftaran(){
         /*
          * berdasarkan update terakir pendaftaran disederhanakan hanya untuk pendaftar fresh saja maka
-         * jenis_pendaftaran_id, asal_universitas, dan skhu diabaikan.
+         * jenis_pendaftaran_id, asal_universitas, dan skhu diabaikan saja.
          */
 
         $array = array(
