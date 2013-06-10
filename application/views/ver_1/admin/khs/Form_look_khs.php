@@ -1,6 +1,9 @@
 <div  class="span12">
     <h3 class="heading">{page_title}</h3>
 
+{selamat}{nama}
+</div>
+<div>
     <table class="table table-striped">
         <thead><tr><?php
             foreach($heading as $item){ ?>
@@ -13,5 +16,5 @@
                 <?php } ?></tr>
         <?php }?></tbody>
     </table>
-    <h3 class="heading">{ipk=}{ipk}</h3>
+    {sks}{tot_sks}<br/>{ipk=}{ipk}<br/>{ket}
 </div>

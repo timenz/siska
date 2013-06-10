@@ -5,7 +5,7 @@ if($jenis_kelamin == 'P')
     $pv = 'selected="selected"';
     $lv = '';
 ?>
-<div class="span12">
+<div c5lass="span12">
     <h3 class="heading">{page_title}</h3>
     <div>
         <form method="post" action="{action}" class="form-horizontal">
