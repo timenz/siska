@@ -1,14 +1,7 @@
 <div  class="span12">
     <h3 class="heading">{page_title}</h3>
 
-    <h4>
-        <?php
-        foreach($konten2 as $items2){ ?>
-            <?php foreach($items2 as $item2){ ?>
-                <?php echo $item2; ?>
-            <?php } ?>
-        <?php }?>
-    </h4>
+
 </div>
 <div>
     <form method="post" action="" class="form-horizontal">
