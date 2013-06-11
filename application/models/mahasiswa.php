@@ -75,6 +75,19 @@ class mahasiswa extends CI_Model {
         $this->session->unset_userdata('cms_id');
         redirect(base_index().'mahasiswa/login_form', 'refresh');
     }
+
+    function m_dashboard(){
+        $this->page->set_sidebar = true;
+        $this->page->konten = $this->parser->parse($this->views_dir.'m_dashboard', array(), true);
+    }
+
+    function profile_mahasiswa(){
+        $this->page->set_sidebar = true;
+        $array = array(
+            'data_mhs' => (array)$this->page->data_siswa,
+        );
+        $this->page->konten = $this->parser->parse($this->views_dir.'profile_mahasiswa', $array, true);
+    }
     
 }
 /* End of file welcome.php */

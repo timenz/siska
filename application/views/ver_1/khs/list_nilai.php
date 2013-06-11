@@ -5,8 +5,8 @@
         <div class="row">
             <div class="span8">
                 <div class="blog_item">
-                    <h2>Silakan Relogin</h2>
-                    <p>Anda sudah terdaftar sebagai mahasiswa di universitas ini, silakan login ulang sebagai mahasiswa.</p>
+                    <h2>Hasil Studi Anda</h2>
+                    <p>Berikut adalah daftar Hasil Studi Anda.</p>
                 </div>
             </div>
         </div>
