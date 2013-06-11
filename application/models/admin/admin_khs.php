@@ -10,16 +10,16 @@ class admin_khs  extends CI_Model {
         //query untuk nama dosen
         $iduser = ($this->session->userdata("id_user"));
 
-        $rows2 = out_where("select karyawan.nama
+      /*  $rows2 = out_where("select karyawan.nama
                             from karyawan, web_user
                             where web_user.id_karyawan = karyawan.id and web_user.id = \"".$iduser."\" ");
         $konten2 = array();
         $no2=1;
 
-        foreach (@$rows2 as $row2) {
+        foreach ($rows2 as $row2) {
             $konten2 [] = array ('Nama Dosen :', $row2->nama);
             $no2++;
-        }
+        }*/
 
         //query untuk nama jadwal
         $query_jadwal = out_where("   select b.id as id, d.nama as hari,i.nama, c.ruang as ruang, c.jam_in as jamin, c.jam_out as jamout
@@ -45,7 +45,7 @@ class admin_khs  extends CI_Model {
         $no=1;
 
 
-        foreach (@$rows as $row) {
+        foreach ($rows as $row) {
             //query untuk nilai
             $query_nilai = out_where ("select nama, id from grade ");
             $rownilai[""] = ":: nilai ::";
@@ -83,7 +83,7 @@ class admin_khs  extends CI_Model {
         //untuk di tampilkan
         $array = array(
             'page_title' => 'FORM TAMBAH NILAI',
-            'konten2' => $konten2,
+            //'konten2' => $konten2,
             'title2' => 'Jadwal:',
             'dropdown_jadwal'=> form_dropdown("jadwal_krs_id",$row_jadwal,"", "id='jadwal_krs_id' "),
             'heading' => array('#', 'NIM', 'NAMA MAHASISWA', 'NILAI'),
@@ -120,8 +120,8 @@ class admin_khs  extends CI_Model {
         $konten = array();
         $no=1;
         foreach (@$rows as $row) {
-            $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/admin_karyawan/form_edit_khs/'.int2kal($row->id).'">edit</a></div>';
-            $konten [] = array ($no, $row->nama, $row->nilai, $row->bobot, $link);
+           // $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/admin_karyawan/form_edit_khs/'.int2kal($row->id).'">edit</a></div>';
+            $konten [] = array ($no, $row->nama, $row->nilai, $row->bobot);
             $no++;
         }
 
@@ -131,7 +131,7 @@ class admin_khs  extends CI_Model {
             'page_title' => 'FORM LIHAT NILAI',
             'title2' => 'Jadwal:',
             'dropdown_jadwal'=> form_dropdown("jadwal_krs_id",$row_jadwal,"", "id='jadwal_krs_id' "),
-            'heading' => array('#', 'NAMA MAHASISWA', 'NILAI', 'BOBOT', 'ACTION'),
+            'heading' => array('#', 'NAMA MAHASISWA', 'NILAI', 'BOBOT'),
             'konten' => $konten,
 			
         );
