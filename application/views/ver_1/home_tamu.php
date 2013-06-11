@@ -10,6 +10,7 @@
     <link href="{assets_url}css/bootstrap.css" rel="stylesheet">
     <link href="{assets_url}css/bootstrap-responsive.css" rel="stylesheet">
     <link href="{assets_url}css/docs.css" rel="stylesheet">
+    <link href="{assets_url}css/custom.css" rel="stylesheet">
     <link href="{assets_url}js/google-code-prettify/prettify.css" rel="stylesheet">
     <link rel="stylesheet" href="{assets_url}css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -47,8 +48,8 @@
 <!--HEADER-->
 <header>
     <div class="container">
-        <div class="row hidden-phone">
-            <img class="flip" src="{assets_url}img/panel.jpg" style="float: right;"/><span class="header_social">Follow us on <span class="badge"><a href="#">Twitter</a></span> and <span class="badge"><a href="#">Facebook</a></span></span>
+        <div class="row hidden-phone" style="height:20px;">
+            <!--<img class="flip" src="{assets_url}img/panel.jpg" style="float: right;"/><span class="header_social">Follow us on <span class="badge"><a href="#">Twitter</a></span> and <span class="badge"><a href="#">Facebook</a></span></span>-->
         </div>
         <div class="row">
             <div class="span4 logo">
@@ -172,7 +173,7 @@
             <div class="container">
                 <div class="row">
                     <div class="span6">
-                        <span>Copyright 2012 Valera - Company. Design by <span class="undercolored"><a href="#">OrangeIde</a></span></span>
+                        <span>Copyright 2012 Fixed - Company. Design by <span class="undercolored"><a href="#">Mti BUXXI Mbengi</a></span></span>
                     </div>
                 </div>
             </div>

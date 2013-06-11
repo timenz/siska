@@ -29,6 +29,14 @@ class pendaftaran extends CI_Model {
             return $this->form_konfirmasi_pembayaran();
         }
 
+        if($row->status_pmb == 'calon'){
+            return $this->cetak_kartu_ujian_page();
+        }
+
+        if($row->status_pmb == 'mahasiswa'){
+            return $this->pesan_mahasiswa();
+        }
+
         if($row->status_pmb == 'konfirm_bayar'){
             redirect(base_index().'pendaftaran/pesan_registrasi/wait_validate/', 'refresh');
             return;
@@ -137,6 +145,14 @@ class pendaftaran extends CI_Model {
             redirect(base_index().'pendaftaran/pesan_registrasi/femail/'.$email, 'refresh');
             return;
         }
+
+
+        $row = out_row('mahasiswa', array('email' => $email));
+        if(count($row) > 0){
+            redirect(base_index().'pendaftaran/pesan_registrasi/femail/'.$email, 'refresh');
+            return;
+        }
+
         $array = array(
             'tanggal_register' => date('Y-m-d H:i:s'),
             'nama' => $this->input->post('nama'),
@@ -232,6 +248,37 @@ class pendaftaran extends CI_Model {
         $this->db->insert('konfirmasi_pembayaran', $array);
         $this->db->update('calon_mahasiswa', array('status_pmb' => 'konfirm_bayar'), array('id' => $row->id));
         redirect(base_index().'pendaftaran/d_dashboard', 'refresh');
+    }
+
+    function cetak_kartu_ujian_page(){
+        $this->page->set_sidebar = true;
+        $array = array(
+            'base_index' => base_index()
+        );
+        $this->page->konten = $this->parser->parse($this->views_dir.'cetak_kartu_ujian', $array, true);
+    }
+
+    function cetak_kartu_ujian(){
+        $this->load->model('mahasiswa');
+        if(!$this->mahasiswa->is_login() or $this->page->web_mode != 'calon_mahasiswa'){ redirect(base_index(), 'refresh'); }
+        //echo 'asdf';
+        $this->page->konten = '';
+        $row = $this->page->data_siswa;
+
+
+        $array[] = array('posx' => 60, 'posy' => 43, 'size' => 20, 'val' => $row->nama );
+        $array[] = array('posx' => 60, 'posy' => 60, 'size' => 20, 'val' => $row->no_ujian );
+
+        cetak_pdf($array, 'assets/ver_1/pdf_tpl/siska_kartu_ujian.pdf', 'kartu ujian - '.$row->nama.' '.date('YmdHis').'.pdf', 'I', false);
+
+    }
+
+    function pesan_mahasiswa(){
+        $this->page->set_sidebar = true;
+        $array = array(
+            'base_index' => base_index()
+        );
+        $this->page->konten = $this->parser->parse($this->views_dir.'pesan_mahasiswa', $array, true);
     }
 
 }
