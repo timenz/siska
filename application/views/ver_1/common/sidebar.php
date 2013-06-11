@@ -36,7 +36,9 @@
             <section>
                 <h4><span class="colored">///</span> Banner</h4>
                 <hr>
-                <div class="banner_image"><a href=""><img src="" /></a></div>
+                <div class="banner_image"><a href="#"><img src="{assets_url}img/banner/b2.jpg" /></a></div>
+                <hr>
+                <div class="banner_image"><a href="#"><img src="{assets_url}img/banner/b1.jpg" /></a></div>
             </section>
 
         </div>

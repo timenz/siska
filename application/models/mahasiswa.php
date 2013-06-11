@@ -75,6 +75,40 @@ class mahasiswa extends CI_Model {
         $this->session->unset_userdata('cms_id');
         redirect(base_index().'mahasiswa/login_form', 'refresh');
     }
+
+    function m_dashboard(){
+        $this->page->set_sidebar = true;
+        $this->page->konten = $this->parser->parse($this->views_dir.'m_dashboard', array(), true);
+    }
+
+    function profile_mahasiswa(){
+        $this->page->set_sidebar = true;
+        $array = array(
+            'data_mhs' => (array)$this->page->data_siswa,
+        );
+        $this->page->konten = $this->parser->parse($this->views_dir.'profile_mahasiswa', $array, true);
+    }
+
+    function cetak_ktm_page(){
+        $this->page->set_sidebar = true;
+        $array = array(
+            'base_index' => base_index()
+        );
+        $this->page->konten = $this->parser->parse($this->views_dir.'cetak_ktm', $array, true);
+    }
+
+    function cetak_ktm(){
+        $this->load->model('mahasiswa');
+        if(!$this->mahasiswa->is_login() ){ redirect(base_index(), 'refresh'); }
+        $row = $this->page->data_siswa;
+        $this->page->konten = '';
+
+        $array[] = array('posx' => 60, 'posy' => 43, 'size' => 20, 'val' => $row->nama );
+        $array[] = array('posx' => 60, 'posy' => 60, 'size' => 20, 'val' => $row->nim );
+
+        cetak_pdf($array, 'assets/ver_1/pdf_tpl/siska_ktm.pdf', 'ktm - '.$row->nama.' '.date('YmdHis').'.pdf', 'I', false);
+
+    }
     
 }
 /* End of file welcome.php */

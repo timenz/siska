@@ -190,4 +190,55 @@ function to_epochtime($data) {
     }
 }
 
+function cetak_pdf($array, $tpl, $file_name, $format = 'D', $debug = false){
+    $ci =& get_instance();
+    //$format = 'D'; // D I
+    //$tpl = 'assets/ver_1/pdf_tpl/siska_kartu_ujian.pdf';
+
+    //$array[] = array('posx' => 36, 'posy' => 56, 'size' => 8, 'color' => '102 102 102', 'val' => 'asdasfeaf' );
+
+    $ci->load->library('fpdi');
+
+    if(!file_exists($tpl)){
+        exit('template not found');
+    }
+    $ci->fpdi->setSourceFile($tpl);
+    $tplidx = $ci->fpdi->importPage(1, '/MediaBox');
+    $size = $ci->fpdi->getTemplateSize($tplidx);
+    $width = $size['w']; $height = $size['h'];
+
+    if($debug){
+        $i = 0;
+        while($i < $width){  $array[] = array('posx' => $i, 'posy' => 95, 'size' => 6, 'val' => '|'.$i); $i = $i + 10; }
+        $i = 0;
+        while($i < $height){ $array[] = array('posx' => 5, 'posy' => $i, 'size' => 6, 'val' => '_'.$i); $i = $i + 10; }
+    }
+
+
+    $ci->fpdi->addPage();
+
+    $ci->fpdi->useTemplate($tplidx, null, null, $width, $height, true);
+
+    foreach($array as $key=>$item){
+        if(!isset($arr[$key])){$arr[$key] = '';}
+        $st = '';
+        if(isset($item['style'])){$st = $item['style'];}
+        $ci->fpdi->SetFont('Arial', $st, $item['size']);
+        $ci->fpdi->SetXY(0, 0);
+        $ci->fpdi->SetTextColor(0, 0, 0);
+        if(isset($item['color'])){
+            $cl = explode(' ', $item['color']);
+            $ci->fpdi->SetTextColor($cl[0], $cl[1], $cl[2]);
+        }
+
+        $ci->fpdi->Text($item['posx'], $item['posy'], $item['val'].$arr[$key]);
+    }
+
+
+    $x = $ci->fpdi->Output($file_name, $format);
+    if($format = 'S'){
+        return array('str' => $x, 'name' => $file_name);
+    }
+}
+
 // eof

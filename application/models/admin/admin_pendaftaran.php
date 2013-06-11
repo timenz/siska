@@ -99,12 +99,12 @@ class admin_pendaftaran extends CI_Model {
         $array = array(
             'status' => $this->input->post('status'),
             'tgl_validasi' => date('Y-m-d H:i:s'),
-            'no_ujian' => date('Y').'.'.$cm->programstudi_kode.'.00'.$cm->id,
+            //'no_ujian' => date('Y').'.'.$cm->programstudi_kode.'.00'.$cm->id,
             'karyawan_id' => $user->id_karyawan
         );
 
         if($array['status'] == 'accept'){
-            $this->db->update('calon_mahasiswa', array('status_pmb' => 'calon'), array('id' => $row->calon_mahasiswa_id));
+            $this->db->update('calon_mahasiswa', array('status_pmb' => 'calon', 'no_ujian' => date('Y').'.'.$cm->programstudi_kode.'.00'.$cm->id), array('id' => $row->calon_mahasiswa_id));
         }
 
         $this->db->update('konfirmasi_pembayaran', $array, array('id' => $id));
