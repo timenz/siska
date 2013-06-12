@@ -1,5 +1,6 @@
 <div  class="span12">
     <h3 class="heading">{page_title}</h3>
+    <p>isi nilai hasil ujian, rentang nilai 0 - 10, jika nilai dibawah 7 maka, calon mahasiswa dinyatakan gagal.</p>
     <div style="margin-bottom: 10px;">
         <?php if(count($link_add) > 1){ ?>
             <a class="btn btn-success" href="<?php echo $link_add['link']; ?>"><?php echo $link_add['name']; ?></a>

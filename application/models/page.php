@@ -7,7 +7,7 @@ class page extends CI_Model {
         $this->lang = $this->config->item('lang');
         $this->tpl = $this->config->item('tpl');
         $this->assets_url = base_url().'assets/'.$this->tpl;
-        $this->title = 'Home';
+        $this->title = 'Siska Home';
         $this->description = '';
         $this->author = '';
         $this->keyword = '';

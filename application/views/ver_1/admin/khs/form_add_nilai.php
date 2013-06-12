@@ -4,16 +4,18 @@
 
 </div>
 <div>
-    <form method="post" action="" class="form-horizontal">
+    <form method="get" action="" class="form-horizontal">
     <table class="table table-striped">
         <tr>
             <td>{title2}</td>
             <td>{dropdown_jadwal}</td>
-            <td><input class="btn btn-gebo" type="submit" value="DAFTAR MAHASISWA"></td>
+            <td><input class="btn btn-gebo" type="submit" value="DAFTAR MAHASISWA" id="get_list_mhs"></td>
         </tr>
     </table>
-    
-	<fieldset>
+    </form>
+    <?php if($show_tb){ ?>
+    <form method="post" action="{action}" class="form-horizontal">
+	<fieldset id="list_fieldset" style="">
 		<div>
 			<table class="table table-striped">
 				<thead><tr><?php
@@ -33,6 +35,6 @@
 			<div class="controls"><input class="btn btn-gebo" type="submit" value="SAVE"></div>
 		</div>
 	</fieldset>
-	</form>
-
-    </div>
+    </form>
+<?php } ?>
+</div>

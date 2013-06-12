@@ -22,7 +22,7 @@
     <![endif]-->
     <!-- fav and touch icons -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-    <link rel="shortcut icon" href="{assets_url}ico/favicon.ico">
+    <link rel="shortcut icon" href="{assets_url}ico/siska-57x57.png">
     <link rel="apple-touch-icon" href="{assets_url}ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{assets_url}ico/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="{assets_url}ico/apple-touch-icon-114x114.png">
