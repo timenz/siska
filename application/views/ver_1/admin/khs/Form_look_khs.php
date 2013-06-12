@@ -1,7 +1,11 @@
+<!--Page contetn--
+untuk halaman yang sudah terintegrasi dengan data base...
+<!--Page contetn-->
+
 <div  class="span12">
     <h3 class="heading">{page_title}</h3>
 
-{selamat}{nama}
+    {selamat}{nama}
 </div>
 <div>
     <table class="table table-striped">

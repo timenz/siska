@@ -116,7 +116,7 @@ class admin_khs  extends CI_Model {
 
         $rows = out_where("select a.nim, a.nama, c.id, f.nama as nilai, f.bobot
                             from mahasiswa as a,  jadwal_mahasiswa as c, jadwal_krs as d, khs as e, grade as f
-                            where a.id=c.mahasiswa_id and c.id=e.jadwal_mahasiswa_id and e.grade_id=f.id and c.jadwal_krs_id=d.id and d.id='".$id."'");
+                            where a.id=c.mahasiswa_id and c.id=e.jadwal_mahasiswa_id and e.grade_id=f.id and c.jadwal_krs_id=d.id and d.id='".$id."' ");
         $konten = array();
         $no=1;
         foreach (@$rows as $row) {
