@@ -10,17 +10,6 @@ class admin_khs  extends CI_Model {
         //query untuk nama dosen
         $iduser = ($this->session->userdata("id_user"));
 
-      /*  $rows2 = out_where("select karyawan.nama
-                            from karyawan, web_user
-                            where web_user.id_karyawan = karyawan.id and web_user.id = \"".$iduser."\" ");
-        $konten2 = array();
-        $no2=1;
-
-        foreach ($rows2 as $row2) {
-            $konten2 [] = array ('Nama Dosen :', $row2->nama);
-            $no2++;
-        }*/
-
         //query untuk nama jadwal
         $query_jadwal = out_where("   select b.id as id, d.nama as hari,i.nama, c.ruang as ruang, c.jam_in as jamin, c.jam_out as jamout
                             from jadwal_krs as b, penjadwalan as c, weekday as d, matkul_dosen as e,
@@ -34,64 +23,96 @@ class admin_khs  extends CI_Model {
         }
 
 
+
         //query untuk daftar nama mahasiswa
             //tombom daftar mhs
-            $id = (isset($_POST["jadwal_krs_id"]) and !empty($_POST["jadwal_krs_id"]))?$_POST["jadwal_krs_id"]:"";
+        //$id = (isset($_POST["jadwal_krs_id"]) and !empty($_POST["jadwal_krs_id"]))?$_POST["jadwal_krs_id"]:"";
 
-        $rows = out_where("select a.nim, a.nama, c.id
-                            from mahasiswa as a,  jadwal_mahasiswa as c, jadwal_krs as d
-                            where a.id=c.mahasiswa_id and c.jadwal_krs_id=d.id and d.id='".$id."'");
+        $id = $this->input->get('jadwal_krs_id');
         $konten = array();
-        $no=1;
+        $show_tb = false;
+        $selected_mk = '';
+        if($id > 0){
+            $selected_mk = $id;
 
+            $rows = out_where("select a.nim, a.nama, c.id
+                                from mahasiswa as a,  jadwal_mahasiswa as c, jadwal_krs as d
+                                where a.id=c.mahasiswa_id and c.jadwal_krs_id=d.id and d.id='".$id."'");
 
-        foreach ($rows as $row) {
-            //query untuk nilai
-            $query_nilai = out_where ("select nama, id from grade ");
-            $rownilai[""] = ":: nilai ::";
-            foreach($query_nilai as $nilai){
-                $rownilai[$nilai->id] = $nilai->nama;
+            $no=1;
+
+            if(count($rows) < 1){
+                $this->page->konten = 'data nilai tidak ditemukan';
+                return;
             }
 
+            foreach ($rows as $row) {
+                //query untuk nilai
+                $query_nilai = out_where ("select nama, id from grade ");
+                $rownilai[""] = ":: nilai ::";
+                foreach($query_nilai as $nilai){
+                    $rownilai[$nilai->id] = $nilai->nama;
+                }
+                $sel = '';
+                $khs = out_row('khs', array('jadwal_mahasiswa_id' => $row->id));
+                if(count($khs) > 0){
+                    $sel = $khs->grade_id;
+                }
 
-            $konten [] = array ($no, $row->nim, $row->nama, (form_dropdown("grade_id[".$row->id."]", $rownilai ,"", "id='grade_id' ")));
-            $no++;
+
+                $konten [] = array ($no, $row->nim, $row->nama, (form_dropdown("grade_id[".$row->id."]", $rownilai ,$sel, "id='grade_id' ")));
+                $no++;
+            }
+
+            $show_tb = true;
+
         }
-
-        //insert khs
-        var_dump($_POST);
-        if (isset($_POST["submit"]) and $_POST["submit"] == "SAVE"){
-
-        $array = array(
-        $jadwal_mahasiswa_id => $_POST["jadwal_mahasiswa_id"],
-        $grade_id => $_POST["grade_id"],
-        );
-        foreach($grade_id as $jadwal_mahasiswa => $nilai_grade){
-           $this->db->insert("khs",$array,array("jadwal_mahasiswa_id" =>$jadwal_mahasiswa, "grade_id" =>$nilai_grade ));
-            //$this->db->insert("khs",$array);
-        }
-
-            echo $this->db->last_query();
-
-
-        }
-
-
-
-
 
         //untuk di tampilkan
         $array = array(
             'page_title' => 'FORM TAMBAH NILAI',
             //'konten2' => $konten2,
             'title2' => 'Jadwal:',
-            'dropdown_jadwal'=> form_dropdown("jadwal_krs_id",$row_jadwal,"", "id='jadwal_krs_id' "),
+            'dropdown_jadwal'=> form_dropdown("jadwal_krs_id",$row_jadwal, $selected_mk, "id='jadwal_krs_id' "),
             'heading' => array('#', 'NIM', 'NAMA MAHASISWA', 'NILAI'),
             'konten' => $konten,
-			'action' => site_url('admin_khs/list_khs')
+            'show_tb' => $show_tb,
+			'action' => base_index().'admin/post/admin_khs/save_nilai?jadwal_krs_id='.$id
         );
 
-        $this->page->konten = $this->parser->parse($this->page->tpl.'khs/Form_add_nilai.php',$array, true);
+        $this->page->konten = $this->parser->parse($this->page->tpl.'khs/form_add_nilai.php',$array, true);
+
+    }
+
+    function save_nilai(){
+        //print_r($this->input->post());
+        $url = '';
+        $krs_id = $this->input->get('jadwal_krs_id');
+
+        if($krs_id > 0){
+            $url = '?jadwal_krs_id='.$krs_id;
+        }
+
+        $grade = $this->input->post('grade_id');
+
+        if(count($grade) < 1){
+            redirect(base_index().'admin/admin_khs/list_khs'.$url);
+            return;
+        }
+
+        foreach($grade as $key => $item){
+            if($item < 1){continue;}
+            $khs = out_row('khs', array('jadwal_mahasiswa_id' => $key));
+            if(count($khs) > 0){
+                $this->db->update("khs",array('grade_id' => $item), array('jadwal_mahasiswa_id' => $key));
+            } else{
+                $this->db->insert("khs",array('jadwal_mahasiswa_id' => $key, 'grade_id' => $item));
+            }
+
+        }
+        //echo $this->db->last_query();
+        $this->page->konten = '';
+        redirect(base_index().'admin/admin_khs/list_khs'.$url);
 
     }
 
