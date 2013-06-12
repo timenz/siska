@@ -35,12 +35,12 @@ class admin_kalendar_akademik extends CI_Model {
         $no = 1;
         foreach($rows as $row){
             $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/admin_kalendar_akademik/form_edit_kalendar_akademik/'.int2kal($row->id).'">Edit</a></div>';
-            $konten[] = array($no, $row->tahun_akademik, $row->semester, $row->fakultas_nama, $row->programstudi_nama,   $link);
+            $konten[] = array($no, $row->tahun_akademik, $row->semester, $row->fakultas_nama, $row->programstudi_nama,  ($row->aktif == 1)?"Aktif":"Non Aktif", $link);
             $no++;
         }
 
         $array = array(
-            'heading' => array('', 'Tahun Akademik', 'Semester', 'Fakultas', 'Program Studi',' Action'),
+            'heading' => array('', 'Tahun Akademik', 'Semester', 'Fakultas', 'Program Studi', 'Is Aktif', ' Action'),
             'konten' => $konten,
             'page_title' => 'Daftar Kalendar akademik',
             'link_add' => array('name' => 'Tambah Kalendar Akademik', 'link' => base_index().'admin/admin_kalendar_akademik/form_add_kalendar_akademik')
@@ -72,6 +72,12 @@ class admin_kalendar_akademik extends CI_Model {
             $row_programstudi[$programstudi->kode] = $programstudi->nama;
         }
 
+        $data_aktif = array("1" => "Aktif", "0" => "Non Aktif");
+        $radio_aktif = "";
+        foreach($data_aktif as $value => $label){
+            $radio_aktif .= "<label> ".form_radio("aktif", $value, false )." ".$label." </label>";
+        }
+
         $array = array(
             'page_title' => 'Tambah Kalendar Akademik',
             'action' => base_index().'admin/admin_kalendar_akademik/form_add_kalendar_akademik',
@@ -80,6 +86,7 @@ class admin_kalendar_akademik extends CI_Model {
             'dropdown_fakultas' => form_dropdown("fakultas_kode",$row_fakultas, "", "id='fakultas_kode'"),
             'dropdown_programstudi' => form_dropdown("programstudi_kode",$row_programstudi,"", "id='programstudi_kode'"),
             'dropdown_semester' => form_dropdown("semester",array("genap" => "Genap", "ganjil" => "Ganjil"),"", "id='semester'"),
+            'radio_aktif' => $radio_aktif,
             'tahun_akademik' => date("Y"),
             'row_fakultas' => $row_fakultas,
             'row_programstudi' => $row_programstudi,
@@ -120,6 +127,19 @@ class admin_kalendar_akademik extends CI_Model {
             $row_programstudi[$programstudi->kode] = $programstudi->nama;
         }
 
+        $data_aktif = array("1" => "Aktif", "0" => "Non Aktif");
+        $radio_aktif = "";
+        foreach($data_aktif as $value => $label){
+            if ($row["aktif"] == $value){
+                $checked = true;
+            }
+            else{
+                $checked = false;
+            }
+            $radio_aktif .= "<label> ".form_radio("aktif", $value, $checked )." ".$label." </label>";
+        }
+
+
         $array = array(
             'page_title' => 'Update Kalendar Akademik',
             'action' => base_index().'admin/admin_kalendar_akademik/form_edit_kalendar_akademik',
@@ -128,6 +148,7 @@ class admin_kalendar_akademik extends CI_Model {
             'dropdown_fakultas' => form_dropdown("fakultas_kode",$row_fakultas, $row["fakultas_kode"], "id='fakultas_kode'"),
             'dropdown_programstudi' => form_dropdown("programstudi_kode",$row_programstudi,$row["programstudi_kode"], "id='programstudi_kode'"),
             'dropdown_semester' => form_dropdown("semester",array("genap" => "Genap", "ganjil" => "Ganjil"),$row["semester"], "id='semester'"),
+            'radio_aktif' => $radio_aktif,
             'tahun_akademik' => $row["tahun_akademik"],
             'row_fakultas' => $row_fakultas,
             'row_programstudi' => $row_programstudi,
