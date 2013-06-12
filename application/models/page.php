@@ -7,7 +7,7 @@ class page extends CI_Model {
         $this->lang = $this->config->item('lang');
         $this->tpl = $this->config->item('tpl');
         $this->assets_url = base_url().'assets/'.$this->tpl;
-        $this->title = 'Home';
+        $this->title = 'Siska Home';
         $this->description = '';
         $this->author = '';
         $this->keyword = '';
@@ -75,6 +75,7 @@ class page extends CI_Model {
         $this->top_menu = $this->r_top_menu();
     }
 
+    // Ini fungsi untuk menampilkan menu atas di dashboard mahasiswa
     function r_top_menu($parent = 0){
         $sql = "select*from web_permission where (permission = '".$this->web_mode."' or permission = 'umum') and parent_model = ".$parent." and is_visible = 'Y' order by urutan";
         $array = array();

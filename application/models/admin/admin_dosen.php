@@ -9,18 +9,18 @@ class admin_dosen extends CI_Model {
 
 
     function list_dosen(){
-        $rows = out_where("select a.id as id, a.nid as nid, b.nama as nama, b.alamat as alamat, b.jenis_kelamin as jenis_kelamin, b.telp as telp
+        $rows = out_where("select a.id as id, a.nip as nip, b.nama as nama, b.alamat as alamat, b.jenis_kelamin as jenis_kelamin, b.telp as telp
                 from dosen as a, karyawan as b where a.karyawan_id = b.id limit 1000");
         $konten = array();
         $no = 1;
         foreach($rows as $row){
             $link = '<div class="btn-group"><a class="btn btn-small btn-success" href="'.base_index().'admin/admin_dosen/form_edit_dosen/'.int2kal($row->id).'">edit</a></div>';
-            $konten[] = array($no, $row->nid, $row->nama, $row->alamat, $row->jenis_kelamin, $row->telp, $link);
+            $konten[] = array($no, $row->nip, $row->nama, $row->alamat, $row->jenis_kelamin, $row->telp, $link);
             $no++;
         }
 
         $array = array(
-            'heading' => array('#', 'NID', 'Nama Dosen', 'Alamat', 'Jenis Kelamin', 'No Telp', '#'),
+            'heading' => array('#', 'NIP', 'Nama Dosen', 'Alamat', 'Jenis Kelamin', 'No Telp', '#'),
             'konten' => $konten,
             'page_title' => 'Listing Dosen',
             'link_add' => array('name' => 'Tambah Dosen', 'link' => base_index().'admin/admin_dosen/form_add_dosen')
@@ -42,7 +42,7 @@ class admin_dosen extends CI_Model {
 
     function add_dosen(){
         $array = array(
-            'nid' => $this->input->post('nid'),
+            'nip' => $this->input->post('nip'),
             'karyawan_id' => $this->input->post('karyawan_id'),
             'programstudi_kode' => $this->input->post('programstudi_kode'),
             'fakultas_kode' => $this->input->post('fakultas_kode')
@@ -64,7 +64,7 @@ class admin_dosen extends CI_Model {
             'fakultas_kode' => $row->fakultas_kode,
             'programstudi_kode' => $row->programstudi_kode,
             'karyawan_id' => $row->karyawan_id,
-            'nid' => $row->nid,
+            'nip' => $row->nip,
             'row_fakultas' => out_where('fakultas', array()),
             'row_prodi' => out_where('programstudi', array()),
             'row_karyawan' => out_where('karyawan', array()),
@@ -80,7 +80,7 @@ class admin_dosen extends CI_Model {
 
         $array = array(
             'id' => $this->input->post('id'),
-            'nid' => $this->input->post('nid'),
+            'nip' => $this->input->post('nip'),
             'karyawan_id' => $this->input->post('karyawan_id'),
             'programstudi_kode' => $this->input->post('programstudi_kode'),
             'fakultas_kode' => $this->input->post('fakultas_kode')

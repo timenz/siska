@@ -1,7 +1,7 @@
-<div  class="span12" style="background-color: #3497C2;">
+<div  class="span12" style="background-color: #DDFF75;">
     <h3 class="heading">Selamat Datang di Pengisian KRS Mahasiswa</h3>
 
-        <b>1. Mahasiswa Baru (Semester Pertama)</b>
+    <b>1. Mahasiswa Baru (Semester Pertama)</b>
     <br> &nbsp; &nbsp; - Telah melakukan registrasi
     <br> &nbsp; &nbsp; - Pengisian KRS dilakukan oleh operator masing-masing Jurusan/Prodi
 
