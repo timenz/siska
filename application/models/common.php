@@ -13,6 +13,53 @@ class common extends CI_Model {
         $this->page->set_sidebar = true;
         $this->page->set_welcome = true;
         $pengumuman = (array)out_where("select*from pengumuman_info order by id desc limit 5");
+
+        /* query kalendar akademik untuk semua fakultas pada tahun ini */
+        $kalendar_akademik = out_where("select  fakultas.nama as fakultas_nama,
+                                                programstudi.nama as programstudi_nama,
+                                                kalendar_informasi.tgl_kegiatan_start,
+                                                kalendar_informasi.tgl_kegiatan_end,
+                                                kalendar_informasi.judul,
+                                                kalendar_informasi.deskripsi
+                                        from kalendar_informasi
+                                            join kalendar_akademik on kalendar_akademik.id = kalendar_informasi.kalendar_akademik_id
+                                            join fakultas on fakultas.kode = kalendar_akademik.fakultas_kode
+                                            join programstudi on programstudi.kode = kalendar_akademik.programstudi_kode
+                                        where kalendar_akademik.tahun_akademik = '".date("Y")."'
+                                        order by fakultas_nama asc, programstudi_nama asc, tgl_kegiatan_start asc
+                                            ");
+
+        $fakultas = out_where("select * from fakultas order by nama ");
+
+        foreach($fakultas as $fak){
+            $progdi = out_where("select * from programstudi where fakultas_kode = '".$fak->kode."' order by nama asc");
+
+            /* fakultas_progdi */
+            $fakultas_progdi[$fak->nama] = $progdi;
+
+            /* query kalendar akademik untuk per fakultas & progdi pada tahun ini. */
+            foreach($progdi as $prog){
+                $kalendar_akademik_progdi[$fak->nama][$prog->nama] = out_where("select  fakultas.nama as fakultas_nama,
+                                                programstudi.nama as programstudi_nama,
+                                                kalendar_informasi.tgl_kegiatan_start,
+                                                kalendar_informasi.tgl_kegiatan_end,
+                                                kalendar_informasi.judul,
+                                                kalendar_informasi.deskripsi
+                                        from kalendar_informasi
+                                            join kalendar_akademik on kalendar_akademik.id = kalendar_informasi.kalendar_akademik_id
+                                            join fakultas on fakultas.kode = kalendar_akademik.fakultas_kode
+                                            join programstudi on programstudi.kode = kalendar_akademik.programstudi_kode
+                                        where kalendar_akademik.tahun_akademik = '".date("Y")."' and
+                                            kalendar_akademik.fakultas_kode = '".$fak->kode."' and
+                                            kalendar_akademik.programstudi_kode = '".$prog->kode."'
+                                        order by fakultas_nama asc, programstudi_nama asc, tgl_kegiatan_start asc
+                                            ");
+            }
+
+        }
+
+
+
         $array = array(
             'assets_url' => $this->page->assets_url,
             'pengumuman' => $pengumuman
