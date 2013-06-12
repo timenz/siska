@@ -53,7 +53,7 @@
         </div>
         <div class="row">
             <div class="span4 logo">
-                <a href="index.html"><img src="{assets_url}img/logo.png" alt="logo" style="margin-bottom:7px; margin-top:7px;" /></a>
+                <a href="{base_index}"><img src="{assets_url}img/logo.png" alt="logo" style="margin-bottom:7px; margin-top:7px;" /></a>
             </div>
             <div class="span8">
                 <nav id="main-nav">
