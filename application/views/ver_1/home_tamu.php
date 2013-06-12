@@ -112,7 +112,7 @@
     </div>
 </div>
 <!--/MAIN CONTENT AREA-->
-<!--TWITTER AREA-->
+<!--TWITTER AREA- ->
 <div class="twitter-block">
     <div class="container">
         <div class="row">
@@ -140,20 +140,19 @@
                 <hr class="visible-phone">
             </div>
             <div class="span3">
-                <h5><span class="colored">///</span> Valera Company</h5>
-                <p>Valera is designed to help people of all skill levels designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
+                <h5><span class="colored">///</span> Universitas Tugu Muda</h5>
+                <p>Back to the Future.</p>
                 <hr class="visible-phone">
             </div>
             <div class="span3 flickr">
-                <h5><span class="colored">///</span> Contact info</h5>
-                <span><strong class="colored"> Aress:</strong> 123456 Street Name, Los Angeles</span>
+                <h5><span class="colored">///</span> Informasi Kontak</h5>
+                <span><strong class="colored"> Alamat:</strong> Tugu Muda BLfd. Semarang</span>
                 <hr class=" hidden-phone"><br class="visible-phone">
-                <span><strong class="colored">Phone:</strong> (1800) 765-4321</span>
+                <span><strong class="colored">Telepon:</strong> 0124 12371</span>
                 <hr class="visible-phone">
             </div>
             <div class="span3 soc_icons">
-                <h5><span class="colored">///</span> Stay in touch</h5>
-                <span>Find out what's happening:</span>
+                <h5><span class="colored">///</span> Kunjungi kami di :</h5>
                 <hr>
                 <a href="#"><div class="icon_t"></div></a>
                 <a href="#"><div class="icon_facebook"></div></a>
@@ -173,7 +172,7 @@
             <div class="container">
                 <div class="row">
                     <div class="span6">
-                        <span>Copyright 2012 Fixed - Company. Design by <span class="undercolored"><a href="#">Mti BUXXI Mbengi</a></span></span>
+                        <span>Copyright 2013 Universitas Tugu Muda Semarang. Design by <span class="undercolored"><a href="#">Mti BUXXI Mbengi</a></span></span>
                     </div>
                 </div>
             </div>
