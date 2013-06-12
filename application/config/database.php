@@ -45,7 +45,7 @@
 | the active record class
 */
 
-$active_group = 'server';
+$active_group = 'default';
 $active_record = TRUE;
 
 

@@ -75,6 +75,7 @@ class page extends CI_Model {
         $this->top_menu = $this->r_top_menu();
     }
 
+    // Ini fungsi untuk menampilkan menu atas di dashboard mahasiswa
     function r_top_menu($parent = 0){
         $sql = "select*from web_permission where (permission = '".$this->web_mode."' or permission = 'umum') and parent_model = ".$parent." and is_visible = 'Y' order by urutan";
         $array = array();

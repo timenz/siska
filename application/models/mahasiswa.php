@@ -9,6 +9,7 @@ class mahasiswa extends CI_Model {
     }
     function is_login(){
         $id = $this->session->userdata('ms_id');
+
         if(strlen($id) > 0){
             $row = out_row('mahasiswa', array('id' => $id));
             if(count($row) > 0){
@@ -68,6 +69,7 @@ class mahasiswa extends CI_Model {
         }
 
         redirect(base_index().'mahasiswa/login_form', 'refresh');
+        //redirect(base_index().'mahasiswa/m_dashboard', 'refresh');
     }
 
     function logout(){

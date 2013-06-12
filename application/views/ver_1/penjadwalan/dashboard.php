@@ -1,48 +1,68 @@
-<div class="row-fluid">
-    <div class="span12">
-        <h3 class="heading">Dashboard</h3>
-        <div class="row-fluid">
-            <div class="span6">
-                <div class="vcard">
-                    <img class="thumbnail" src="{base_url}assets/ver_1/admin/images/foto.gif" alt="">
-                    <ul>
-                        <li class="v-heading">
-                            User info
-                        </li>
-                        <li>
-                            <span class="item-key">Username</span>
-                            <div class="vcard-item">{nim}</div>
-                        </li>
-                        <li>
-                            <span class="item-key">Nama Lengkap</span>
-                            <div class="vcard-item">[label]</div>
-                        </li>
-                        <li>
-                            <span class="item-key">Kategori</span>
-                            <div class="vcard-item">[label]</div>
-                        </li>
-                        <li>
-                            <span class="item-key">Semester</span>
-                            <div class="vcard-item">[label]</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <br><br>
-                <div class="row">
-                    <div class="span12 pagination-centered">
-                        <a href="{base_url}mhs_jadwal/dashboard_krs" rel="tooltip" title="Kartu Rencana Studi" data-placement="left"> <img src="{base_url}assets/ver_1/admin/images/krs.png" alt="KRS" class="img-polaroid" /></a>
-                        <a href="{base_url}admin/admin_jadwal/search" rel="tooltip" title="Jadwal Kuliah" data-placement="right"> <img src="{base_url}assets/ver_1/admin/images/jadwal.png" alt="Jadwal" class="img-polaroid" /></a>
-                    </div>
-                </div>
-
-            </div>
+<!--<div class="row-fluid">-->
+<!--    <div class="span12">-->
+<!--        <h3 class="heading">Dashboard</h3>-->
+<!--        <div class="row-fluid">-->
+<!--            <div class="span6">-->
+<!--                <div class="vcard">-->
+<!--                    <img class="thumbnail" src="{base_url}assets/ver_1/admin/images/foto.gif" alt="">-->
+<!--                    <ul>-->
+<!--                        <li class="v-heading">-->
+<!--                            User info-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <span class="item-key">Username</span>-->
+<!--                            <div class="vcard-item">{nim}</div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <span class="item-key">Nama Lengkap</span>-->
+<!--                            <div class="vcard-item">[label]</div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <span class="item-key">Kategori</span>-->
+<!--                            <div class="vcard-item">[label]</div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <span class="item-key">Semester</span>-->
+<!--                            <div class="vcard-item">[label]</div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!---->
+<!--                <br><br>-->
+<!--                <div class="row">-->
+<!--                    <div class="span12 pagination-centered">-->
+<!--                        <a href="{base_url}mhs_jadwal/dashboard_krs" rel="tooltip" title="Kartu Rencana Studi" data-placement="left"> <img src="{base_url}assets/ver_1/admin/images/krs.png" alt="KRS" class="img-polaroid" /></a>-->
+<!--                        <a href="{base_url}admin/admin_jadwal/search" rel="tooltip" title="Jadwal Kuliah" data-placement="right"> <img src="{base_url}assets/ver_1/admin/images/jadwal.png" alt="Jadwal" class="img-polaroid" /></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<br>-->
+<style type="text/css">
+    .main-info {
+        background-color: #DDFF75;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+</style>
+<div class="span12">
+    <?php if ($this->session->flashdata('message')) : ?>
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <?php echo $this->session->flashdata('message'); ?>
         </div>
-    </div>
+    <?php endif; ?>
+    <a href="{base_url}mhs_jadwal/dashboard_krs" class="btn btn-info">Isi KRS</a>
+    <a href="{base_url}mhs_jadwal/jadwal" class="btn btn-info">Lihat Jadwal</a>
 </div>
-<br>
 
-<div  class="span12" style="background-color: #DDFF75;">
+<div  class="span12 main-info">
     <h3 class="heading">Selamat Datang di Pengisian KRS Mahasiswa</h3>
 
     <b>1. Mahasiswa Baru (Semester Pertama)</b>

@@ -8,7 +8,26 @@ class mhs_jadwal extends CI_Model {
 
     function jadwal(){
         $this->page->title = 'HALAMAN DASHBOARD';
-        $array=array();
+
+        $mhs = (array)$this->page->data_siswa;
+
+        $kalendar_akademik = out_where('SELECT * FROM kalendar_akademik WHERE aktif = 1 AND programstudi_kode = \''.$mhs['programstudi_kode'].'\'');
+
+        $array = array();
+
+        $array['krs'] = out_where('SELECT mk.nama, md.sks, mk.semester, pj.ruang, pj.jam_in, wk.nama as hari, jk.id AS jadwal_krs_id, k.nama as nama_dosen
+                        FROM jadwal_mahasiswa jm
+                        JOIN jadwal_krs jk ON jk.id = jm.jadwal_krs_id
+                        JOIN matkul_dosen md ON md.id = jk.matkul_dosen_id
+                        JOIN dosen d ON d.id = md.dosen_id
+                        JOIN karyawan k ON k.id = d.karyawan_id
+                        JOIN penjadwalan pj ON pj.id = jk.penjadwalan_id
+                        JOIN matakuliah mk ON mk.id = pj.id
+                        JOIN siska.weekday wk ON wk.id = pj.weekday_id WHERE jm.kalendar_akademik_id = '.$kalendar_akademik[0]->id.'
+                        AND jm.mahasiswa_id = '.$mhs['id']);
+
+        $array['mhs'] = $mhs;
+
         $this->page->konten = $this->parser->parse($this->views_dir.'jadwal', $array, true);
     }
 
@@ -43,9 +62,9 @@ class mhs_jadwal extends CI_Model {
                             WHERE jadwal_krs.penjadwalan_id=penjadwalan.id AND jadwal_krs.id=jadwal_mahasiswa.jadwal_krs_id
                             GROUP BY ruang asc");
         $btsruang=array('$penjadwalan->quota');
-        if($penjadwalan<$btsruang){
-            echo "Full";
-        } else{echo"Empty";}
+//        if($penjadwalan<$btsruang){
+//            echo "Full";
+//        } else{echo"Empty";}
 
 //DROPDOWN
         $query_waktu = out_where("select * from penjadwalan order by jam_in asc");
@@ -113,9 +132,6 @@ class mhs_jadwal extends CI_Model {
 //checkBox
 
 
-
-
-
         $array = array(
             'heading' => array('Pilih', 'MATA KULIAH', 'SKS', 'Semester', 'Pilih Ruang', 'Pilih Waktu', 'Pilih Hari', 'Keterangan'),
             'konten' => $konten,
@@ -125,17 +141,55 @@ class mhs_jadwal extends CI_Model {
             'action' => base_index().'mhs_jadwal/isi',
         );
 
+        $mhs = (array)$this->page->data_siswa;
+
+        $kalendar_akademik = out_where('SELECT * FROM kalendar_akademik WHERE aktif = 1 AND programstudi_kode = \''.$mhs['programstudi_kode'].'\'');
+
+        // ini tambahan untuk mengirim data mahasiswa ke view
+        $array = $array + array(
+            'data_mhs' => (array)$this->page->data_siswa,
+            'kalendar_akademik_id' => $kalendar_akademik[0]->id,
+            'makuls' => out_where('SELECT mk.nama, md.sks, mk.semester, pj.ruang, pj.jam_in, wk.nama as hari, jk.id AS jadwal_krs_id FROM jadwal_krs jk
+                        JOIN matkul_dosen md ON md.id = jk.matkul_dosen_id
+                        JOIN penjadwalan pj ON pj.id = jk.penjadwalan_id
+                        JOIN matakuliah mk ON mk.id = pj.id
+                        JOIN siska.weekday wk ON wk.id = pj.weekday_id WHERE mk.semester = '.$mhs['semester'])
+        );
 
 
         $this->page->konten = $this->parser->parse($this->views_dir.'isi_krs', $array, true, 'refresh');
     }
 
     function isi(){
-//        $array=array(
-//            'ruang' => $this->input->post('ruang'),
-//        );
-//        $this->db->insert('jadwal_mahasiswa', $array);
-        redirect(base_index().'mhs_jadwal/coba');
+
+        $id_kalendar_akademik = $this->input->post('id_kalendar_akademik');
+        $id_mahasiswa = $this->input->post('id_mahasiswa');
+        $id_jadwals = $this->input->post('id_jadwal_krs');
+        $sks = $this->input->post('sks');
+
+        $jumlah = 0;
+        foreach($id_jadwals as $jadwal)
+        {
+            $jumlah += $this->input->post($jadwal);
+        }
+        if ($jumlah > 24)
+        {
+            $this->session->set_flashdata('warning','Maaf, SKS yang diambil melibihi batas (24 SKS)');
+            $redirect = 'mhs_jadwal/isi_krs';
+        }
+        else
+        {
+            foreach($id_jadwals as $id_jadwal){
+                $row = array('kalendar_akademik_id' => $id_kalendar_akademik, 'mahasiswa_id' => $id_mahasiswa, 'jadwal_krs_id' => $id_jadwal);
+                $this->db->insert('jadwal_mahasiswa',$row);
+            }
+
+            $this->session->set_flashdata('message','Pengisian KRS berhasil.');
+
+            $redirect = 'mhs_jadwal/dashboard';
+        }
+
+        redirect(base_index().$redirect);
     }
 
     function dashboard_krs(){
@@ -145,22 +199,45 @@ class mhs_jadwal extends CI_Model {
 
         $queries = out_where("select matakuliah.*, matkul_dosen.sks as matkul_dosen_sks from matakuliah join matkul_dosen on matkul_dosen.matakuliah_id = matakuliah.id");
 
+        $mhs = (array)$this->page->data_siswa;
+        $kalendar_akademik = out_where('SELECT * FROM kalendar_akademik WHERE aktif = 1 AND programstudi_kode = \''.$mhs['programstudi_kode'].'\'');
+
+        $jadwal = out_where('SELECT * FROM jadwal_mahasiswa WHERE mahasiswa_id = '.$mhs['id']);
+
+        $udah_diambil = out_where('SELECT mk.nama, md.sks, mk.semester, pj.ruang, pj.jam_in, wk.nama as hari, jk.id AS jadwal_krs_id, k.nama as nama_dosen
+                        FROM jadwal_mahasiswa jm
+                        JOIN jadwal_krs jk ON jk.id = jm.jadwal_krs_id
+                        JOIN matkul_dosen md ON md.id = jk.matkul_dosen_id
+                        JOIN dosen d ON d.id = md.dosen_id
+                        JOIN karyawan k ON k.id = d.karyawan_id
+                        JOIN penjadwalan pj ON pj.id = jk.penjadwalan_id
+                        JOIN matakuliah mk ON mk.id = pj.id
+                        JOIN siska.weekday wk ON wk.id = pj.weekday_id WHERE jm.mahasiswa_id = '.$mhs['id']);
+
         $konten = array();
         $no = 1;
-        foreach($queries as $query){
+        foreach($udah_diambil as $data){
             $keterangan = 'sudah diambil';
-            $konten[] = array($no, $query->nama, $query->matkul_dosen_sks, $keterangan);
+            $konten[] = array($no, $data->nama, $data->sks, $keterangan);
             $no++;
         }
 
         $array = array(
+            'sudah_isi_krs' => count($jadwal),
+            'base_url' => base_url(),
             'heading' => array('No', 'Mata Kuliah', 'SKS', 'Keterangan'),
             'konten' => $konten,
             'action' => base_index().'mhs_jadwal/isi_krs',
             'nim' => $this->session->userdata("id_user"),
             'nama' => $user -> nama,
+            'mhs' => $mhs,
+            'tahun_akademik' => $kalendar_akademik[0]->tahun_akademik
 
         );
+
+        // ini tambahan untuk mengirim data mahasiswa yang login ke view
+        $array = $array + array('data_mhs' => (array)$this->page->data_siswa);
+
         $this->page->konten = $this->parser->parse($this->views_dir.'dashboard_krs', $array, true);
     }
 
