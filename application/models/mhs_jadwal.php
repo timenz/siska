@@ -92,7 +92,7 @@ class mhs_jadwal extends CI_Model {
         }
         if ($jumlah > 24)
         {
-            $this->session->set_flashdata('warning','Maaf, SKS yang diambil melebihi batas (24 SKS)');
+            $this->session->set_flashdata('WARNING','Maaf, SKS yang diambil melebihi batas (24 SKS)');
             $redirect = 'mhs_jadwal/isi_krs';
         }
         else
