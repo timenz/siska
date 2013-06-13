@@ -229,7 +229,7 @@ class mhs_jadwal extends CI_Model {
             'konten' => $konten,
             'action' => base_index().'mhs_jadwal/isi_krs',
             'nim' => $this->session->userdata("id_user"),
-            'nama' => $user -> nama,
+//            'nama' => $user -> nama,
             'mhs' => $mhs,
             'tahun_akademik' => $kalendar_akademik[0]->tahun_akademik
 
