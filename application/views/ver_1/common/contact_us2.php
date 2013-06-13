@@ -5,22 +5,22 @@
         <div class="row">
                 <div class="span8">
                     <div class="well">
-                        <h4><span class="colored">///</span> Silahkan Isi  Buku Tamu</h4>
-                        <p>Valera is designed to help people of all skill levels designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
+                        <h4><span class="colored">///</span> Hubungi Kami</h4>
+                        <p>Universitas Tugu Muda Semarang, adalah universitas elite yang terletak di tengah kota, silakan kunjungi kami di alamat ini, atau telepon, atau email dll.</p>
                         <hr>
-                        <span><strong class="colored">Aress:</strong> 123456 Street Name, Los Angeles</span>
+                        <span><strong class="colored">Alamat:</strong> Tugu Muda Blfd.</span>
                         <br>
-                        <span><strong class="colored">Phone:</strong> (1800) 765-4321</span>
+                        <span><strong class="colored">Phone:</strong> 0124 12371</span>
                         <br>
-                        <span><strong class="colored">Fax:</strong> (1800) 765-4321</span>
+                        <span><strong class="colored">Fax:</strong> 0124 12371</span>
                         <br>
-                        <span><strong class="colored">Website:</strong> http://yoursitename.com</span>
+                        <span><strong class="colored">Website:</strong> http://untumu.ac.id</span>
                         <br>
-                        <span><strong class="colored">Email:</strong> info@yoursitename.com</span>
+                        <span><strong class="colored">Email:</strong> info@untumu.ac.id</span>
                     </div>
                 </div>
                 <div class="span8">
-                    <h3><span class="colored">///</span> Punya Pertanyaan, Komentar, Silakan isi Form Berikut</h3>
+                    <h3><span class="colored">///</span> Punya Pertanyaan, Komentar, Silakan isi Form Buku Tamu Berikut</h3>
                     <div id="note"></div>
                     <div id="fields">
                         <form class="form" id="ajax-contact-form" action="">

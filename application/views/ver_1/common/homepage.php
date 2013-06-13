@@ -11,9 +11,9 @@
                             <div class="blog_head">
                                 <h3><a href="blog_single.html">'.$item->judul.'</a></h3>
                             </div>
-                            <div class="view view-first">
+                            <!--<div class="view view-first">
                                 <img src="'.$assets_url.'img/no_image.jpg" alt="Hanging Note Sign Psd" /></a>
-                            </div>
+                            </div>-->
                             <p>'.nl2br($item->deskripsi).'</p>
                         </div>
                     </div>

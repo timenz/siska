@@ -29,7 +29,19 @@ class common extends CI_Model {
                                         order by fakultas_nama asc, programstudi_nama asc, tgl_kegiatan_start asc
                                             ");
 
+
+        $array = array(
+            'assets_url' => $this->page->assets_url,
+            'pengumuman' => $pengumuman,
+        );
+        $this->page->konten = $this->parser->parse($this->view_dir.'homepage', $array, true);
+        //$this->buku_tamu->form_buku_tamu();
+    }
+
+    function kalender_akademik(){
         $fakultas = out_where("select * from fakultas order by nama ");
+
+        $kalendar_akademik_progdi = array();
 
         foreach($fakultas as $fak){
             $progdi = out_where("select * from programstudi where fakultas_kode = '".$fak->kode."' order by nama asc");
@@ -58,14 +70,14 @@ class common extends CI_Model {
 
         }
 
+        //print_r($kalendar_akademik_progdi);exit();
 
-
+        $this->page->set_sidebar = true;
         $array = array(
             'assets_url' => $this->page->assets_url,
-            'pengumuman' => $pengumuman
+            'kalender_akademik' => $kalendar_akademik_progdi
         );
-        $this->page->konten = $this->parser->parse($this->view_dir.'homepage', $array, true);
-        //$this->buku_tamu->form_buku_tamu();
+        $this->page->konten = $this->parser->parse($this->view_dir.'kalender_akademik', $array, true);
     }
 
     function about_us(){

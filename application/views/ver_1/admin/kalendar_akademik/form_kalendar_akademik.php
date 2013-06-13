@@ -21,6 +21,12 @@
                     <label class="control-label">Tahun Akademik</label>
                     <div class="controls"><input type="text" name="tahun_akademik" id="tahun_akademik"size="4" value="{tahun_akademik}" class="input-mini" /> </div>
                 </div>
+                <div class="control-group formSep">
+                    <label class="control-label">Aktif</label>
+                    <div class="controls">
+                        {radio_aktif}
+                    </div>
+                </div>
                 <div class="control-group">
                     <div class="controls"><input class="btn btn-gebo" type="submit" value="Simpan"> {link_back} </div>
                 </div>
