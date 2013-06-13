@@ -174,7 +174,7 @@ foreach($jenis_pendaftaran as $prop){
                         </div>-->
 
                         <div class="control-group">
-                            <label class="control-label" for="transkrip_nilai">Nilai Transkrip</label>
+                            <label class="control-label" for="transkrip_nilai">Nilai Rata - Rata</label>
                             <div class="controls">
                                 <input type="text" class="input validate[required] span1" id="transkrip_nilai" name="transkrip_nilai" value="<?php echo $row['transkrip_nilai']; ?>">
                             </div>

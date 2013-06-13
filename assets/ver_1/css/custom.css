@@ -6,3 +6,6 @@
     margin-top:15px;
     margin-left:20px
 }
+.list_horizontal li{float: left; list-style: none; margin-right: 15px}
+.box_info {padding: 20px}
+.box_info table td {padding: 5px}
