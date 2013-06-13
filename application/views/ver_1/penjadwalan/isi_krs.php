@@ -1,38 +1,3 @@
-<!--<div class="row-fluid">-->
-<!--    <div class="span12">-->
-<!--        <h3 class="heading">PENGISIAN KRS</h3>-->
-<!--        <div class="row-fluid">-->
-<!--            <div class="span12">-->
-<!--                <div class="vcard">-->
-<!--                    <img class="thumbnail" src="{base_url}assets/ver_1/admin/images/foto.gif" alt="">-->
-<!--                </div>-->
-<!--                    <ul>-->
-<!--                        <li class="v-heading">-->
-<!--                            User info-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <span class="item-key">NIM</span>-->
-<!--                            <div class="vcard">{nim}</div>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <span class="item-key">Nama Lengkap</span>-->
-<!--                            <div class="vcard-item">{nama}</div>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <span class="item-key">Kategori</span>-->
-<!--                            <div class="vcard-item">{kategori}</div>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <span class="item-key">Semester</span>-->
-<!--                            <div class="vcard-item">{semester}</div>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-
 <style>
     .heading.top {
         border-bottom: 1px solid #333;
@@ -56,7 +21,7 @@
 <div class="row-fluid">
     <div class="span12">
         <div class="heading top">
-            <h1>PENGISIAN KRS</h3>
+            <h1>PENGISIAN KRS</h1>
         </div>
         <div class="info-mahasiswa">
             <span>NIM </span> <div class="val">: <?php echo $data_mhs['nim']; ?></div>
@@ -71,7 +36,7 @@
 
 <div class="row-fluid">
     <div id="isi" class="span12">
-        <h3 class="heading">Mata Kuliah Yang Dapat Diambil (maksimal pengambilan SKS sebanyak 24)</h3>
+        <h3 class="heading">Mata Kuliah Yang Dapat Diambil</h3>
 
 
         <form method="post" action="{action}" class="form-horizontal">
@@ -92,27 +57,27 @@
          <table class="table table-bordered table-striped" id="smpl_tbl">
             <thead>
                 <tr>
-                    <th>Pilih</th>
-                    <th>Matakuliah</th>
-                    <th>SKS</th>
-                    <th>Semester</th>
-                    <th>Ruang</th>
-                    <th>Waktu</th>
-                    <th>Hari</th>
+                    <th><center>Pilih</center></th>
+                    <th><center>Matakuliah</center></th>
+                    <th><center>SKS</center></th>
+                    <th><center>Semester</center></th>
+                    <th><center>Ruang</center></th>
+                    <th><center>Waktu</center></th>
+                    <th><center>Hari</center></th>
                 </tr>
             </thead>
             <tbody>
             <?php foreach($makuls as $makul) : ?>
                 <tr>
                     <td>
-                        <input type="checkbox" name="id_jadwal_krs[]" value="<?php echo $makul->jadwal_krs_id; ?>" />
+                        <center><input type="checkbox" name="id_jadwal_krs[]" value="<?php echo $makul->jadwal_krs_id; ?>" /></center>
                         <input type="hidden" name="<?php echo $makul->jadwal_krs_id; ?>" value="<?php echo $makul->sks; ?>" /></td>
                     <td><?php echo $makul->nama; ?></td>
-                    <td><?php echo $makul->sks; ?></td>
-                    <td><?php echo $makul->semester; ?></td>
+                    <td><center><?php echo $makul->sks; ?></center></td>
+                    <td><center><?php echo $makul->semester; ?></center></td>
                     <td><?php echo $makul->ruang; ?></td>
                     <td><?php echo $makul->jam_in; ?></td>
-                    <td><?php echo $makul->hari; ?></td>
+                    <td><center><?php echo $makul->hari; ?></center></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

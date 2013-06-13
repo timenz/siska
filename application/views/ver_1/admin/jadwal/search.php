@@ -1,7 +1,7 @@
 <div class="span6">
-    <form class="well form-search">
+    <form class="well form-search" action="" method="post">
         <p class="f_legend">Cari Mahasiswa</p>
-        <input type="text" class="input-xlarge" placeholder="mahasiswa">
+        <input type="text" class="input-xlarge" placeholder="mahasiswa" name="q">
         <button type="submit" class="btn">Submit</button>
     </form>
 </div>
@@ -12,35 +12,22 @@
         <tr>
             <th>NIM</th>
             <th>Nama</th>
-            <th>Keterangan</th>
+            <th>Email</th>
             <th></th>
         </tr>
         </thead>
         <tbody>
+        <?php foreach($mahasiswa as $siswa) : ?>
         <tr>
-            <td>134</td>
-            <td>Summer Throssell</td>
-            <td>summert@example.com</td>
-            <td><button class="btn btn-success">Lihat Detail</button></td>
-        </tr>
-        <tr>
-            <td>135</td>
-            <td>Anthony Pound</td>
-            <td>anthonyp@example.com</td>
-            <td><button class="btn btn-success">Lihat Detail</button></td>
-        </tr>
-        <tr>
-            <td>136</td>
-            <td>Erin Church</td>
-            <td>erinc@example.com</td>
-            <td><button class="btn btn-success">Lihat Detail</button></td>
-        </tr>
-        <tr>
-            <td>137</td>
-            <td>Declan Pamphlett</td>
-            <td>declanp@example.com</td>
-            <td><button class="btn btn-success">Lihat Detail</button></td>
-        </tr>
+            <td><?php echo $siswa->nim; ?></td>
+            <td><?php echo $siswa->nama; ?></td>
+            <td><?php echo $siswa->email; ?></td>
+            <td>                
+                <a href="<?php echo base_url(); ?>admin/admin_jadwal/lihat_krs/<?php echo $siswa->id; ?>" class="btn btn-success">Lihat KRS</a>
+                <a href="<?php echo base_url(); ?>admin/admin_jadwal/print_krs/<?php echo $siswa->id; ?>" class="btn btn-info">Cetak KRS</a>
+            </td>
+        </tr>       
+        <?php endforeach; ?> 
         </tbody>
     </table>
 </div>

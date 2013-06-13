@@ -4,22 +4,18 @@
 		<center><h1><p class="f_legend">KARTU RENCANA STUDI</p></h1></center>
 		<p></p>
 	    <div class="vcard">
-            <ul>
+            <ul style="margin-left:0px;">
             <li>
             <span class="item-key">Nama Lengkap</span>
-				<div class="vcard-item">{nama}</div>
+				<div class="vcard-item"><?php echo $mhs[0]->nama; ?></div>
                 </li>
                 <li>
 			<span class="item-key">N I M</span>
-                <div class="vcard-item">[label]</div>
+                <div class="vcard-item"><?php echo $mhs[0]->nim; ?></div>
 				</li>
                 <li>
             <span class="item-key">Semester</span>
-                <div class="vcard-item">[label]</div>
-                </li>
-                <li>
-            <span class="item-key">Dosen Wali</span>
-                <div class="vcard-item">[label]</div>
+                <div class="vcard-item"><?php echo $mhs[0]->semester; ?></div>
                 </li>
             </ul>
         </div>	
@@ -31,60 +27,22 @@
             <thead>
             <tr>
                 <th class="table_checkbox">No</th>
-                <th>Kode MK</th>
                 <th>Nama Mata Kuliah</th>
-                <th>SKS</th>
-                <th>Kelas</th>
+                <th>SKS</th>                
                 <th>Ruang</th>
                 <th>Dosen</th>
             </tr>
             </thead>
             <tbody>
+            <?php $no=1;foreach($krs as $data) : ?>
             <tr>
-                <th class="table_checkbox">1</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-            </tr>
-            <tr>
-                <th class="table_checkbox">2</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-            </tr>
-            <tr>
-                <th class="table_checkbox">3</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-            </tr>
-            <tr>
-                <th class="table_checkbox">4</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-            </tr>
-            <tr>
-                <th class="table_checkbox">5</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-                <th>[label]</th>
-            </tr>
+                <th class="table_checkbox"><?php echo $no; ?></th>
+                <th><?php echo $data->nama; ?></th>
+                <th><?php echo $data->sks; ?></th>
+                <th><?php echo $data->ruang; ?></th>
+                <th><?php echo $data->nama_dosen; ?></th>                
+            </tr>            
+            <?php $no++;endforeach; ?>
             </tbody>
         </table>
 		</div>
