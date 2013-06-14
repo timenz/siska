@@ -1,5 +1,7 @@
 <?php
 
+// file application/models/bukutamu.php
+
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 class buku_tamu extends CI_Model {
     public function __construct() {
