@@ -204,8 +204,8 @@
 <script src="{assets_url}js/superfish-menu/superfish.js"></script>
 <script src="{assets_url}js/plugin.js"></script>
 <script src="{assets_url}js/jquery.prettyPhoto.js"></script>
-<script src="{assets_url}js/twitter.js"></script>
-<!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<!--<script src="{assets_url}js/twitter.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script src="{assets_url}js/jquery.gmap.min.js"></script>-->
 <script src="{assets_url}js/jquery.preloader.js"></script>
 <script src="{assets_url}js/custom.js"></script>

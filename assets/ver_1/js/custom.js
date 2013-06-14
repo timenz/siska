@@ -179,7 +179,7 @@ $("a[rel^='prettyPhoto']").prettyPhoto({opacity:0.80,default_width:200,default_h
 jQuery.noConflict()(function($){
 	jQuery(document).ready(function () {
 		// start jqtweet!
-		JQTWEET.loadTweets();
+		// JQTWEET.loadTweets();
 	});
 })
 

@@ -33,6 +33,10 @@ class pendaftaran extends CI_Model {
             return $this->cetak_kartu_ujian_page();
         }
 
+        if($row->status_pmb == 'lulus_ujian'){
+            return $this->info_daftar_ulang();
+        }
+
         if($row->status_pmb == 'mahasiswa'){
             return $this->pesan_mahasiswa();
         }
@@ -279,6 +283,16 @@ class pendaftaran extends CI_Model {
             'base_index' => base_index()
         );
         $this->page->konten = $this->parser->parse($this->views_dir.'pesan_mahasiswa', $array, true);
+    }
+
+
+
+    function info_daftar_ulang(){
+        $this->page->set_sidebar = true;
+        $array = array(
+            'base_index' => base_index()
+        );
+        $this->page->konten = $this->parser->parse($this->views_dir.'info_daftar_ulang', $array, true);
     }
 
 }
